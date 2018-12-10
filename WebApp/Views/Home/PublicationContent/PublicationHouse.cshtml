@@ -1,0 +1,15 @@
+﻿@model  WebApp.Models.Publication
+
+@if (Model.IsRent) {
+    <div>Сдача</div>
+}
+else {
+    <div>Продажа</div>
+}
+<div>Количество комнат @Html.DisplayFor(m => m.RoomAmount)</div>
+<div>Общая площадь @Html.DisplayFor(m => m.TotalArea)</div>
+<div>Жилая площадь @Html.DisplayFor(m => m.LivingArea)</div>
+<div>Площадь кухни @Html.DisplayFor(m => m.KitchenArea)</div>
+<div>Площадь участка @Html.DisplayFor(m => m.PropertyArea)</div>
+<div>Год постройки @Html.DisplayFor(m => m.YearOfConstruction)</div>
+<div>Тип дома @Html.DisplayFor(m => m.WallMaterial.Content)</div>

@@ -1,0 +1,34 @@
+﻿@model WebApp.Models.User
+@{
+    ViewBag.Title = "Профиль";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="publcontent">
+    @using (Html.BeginForm())
+    {
+        <div>@Html.Label("Изменение персональных данных")</div>
+        <div>
+            @Html.Label("Имя")
+            @Html.EditorFor(m => m.Name)
+            @Html.ValidationMessageFor(m => m.Name)
+        </div>
+        <div>
+            @Html.Label("E-mail")
+            @Html.DisplayFor(m => m.Email)
+            @Html.ValidationMessageFor(m => m.Email)
+        </div>
+        <div>
+            @Html.Label("Телефон")
+            @Html.EditorFor(m => m.Phone)
+            @Html.ValidationMessageFor(m => m.Phone)
+        </div>
+        <div>
+            <input type="submit" value="Изменить" />
+        </div>
+        <div>
+            @Html.ValidationSummary(true)
+        </div>
+    }
+</div>
+

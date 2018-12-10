@@ -1,0 +1,23 @@
+﻿@model  WebApp.Models.Publication
+
+<div>Этаж @Html.DisplayFor(m => m.Floor) </div>
+<div>Количество комнат @Html.DisplayFor(m => m.RoomAmount)</div>
+<div>Количество предлагаемых комнат @Html.DisplayFor(m => m.OfferingRoomAmount)</div>
+@if(Model.IsPassageRoom) {
+    <div>>Проходная</div>
+}
+else {
+    <div>С отдельным входом</div>
+}
+@if(Model.IsFurnitureExist) {
+    <div>Есть мебель</div>
+}
+else {
+    <div>Мебель отсутствует</div>
+}
+@if(Model.IsOneDayRent) {
+    <div>Сдача посуточно</div>
+}
+else {
+    <div>Сдача на длительный срок</div>
+}

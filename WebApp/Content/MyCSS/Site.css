@@ -1,0 +1,107 @@
+﻿
+.mainpage {
+    background-color: rgb(30, 30, 30);
+    font-family: Verdana;
+    font-size: 15pt;
+    font-weight: 500;
+    color: white;
+}
+
+#maingrid{
+    display: grid;
+    grid-template-areas: "a a a"
+                         ". b ."
+                         "c c c";
+}
+#maingrid > nav {
+    grid-area: a;
+}
+#maingrid > main {
+    grid-area: b;
+    justify-self: center;
+}
+#maingrid > footer {
+    grid-area: c;
+    align-self: flex-end;
+}
+
+#navgrid {
+    display: grid;
+    grid-template-areas: ". . ." 
+                         ". a ." 
+                         ". . .";
+    margin-bottom: 10px;
+}
+#navgrid > ul{
+    grid-area: a;
+    align-self: center;
+}
+nav {
+    background-color: white;
+    height: 70px;
+    box-shadow: 5px 5px 0px rgb(128, 128, 128);
+    text-align: center;
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav li{
+    display: inline;
+    margin: 0px 10px 0px 10px;
+    position: relative;
+}
+footer{
+    font-size: 7pt;
+    align-self: flex-end;
+    text-align: center;
+}
+
+a:link {
+    color: dimgrey;
+    text-decoration: none;
+}
+a:visited {
+    color: dimgrey;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    text-decoration: none;
+}
+a:active {
+    color: red;
+    text-decoration: none;
+}
+
+.publcontent {
+    font-size: 12pt;
+    text-align: justify;
+    /*max-width: 400px;*/
+    background-color: white;
+    color: dimgrey;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 5px 5px 0px rgb(128, 128, 128);
+    margin: 10px 0;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: -5px;
+    background-color: white;
+    text-align: left;
+    z-index: 501;
+}
+
+.submenu > li{
+    margin: 0;
+    padding: 5px;
+    display: block;
+}
+
+#name{
+    color: dimgrey;
+}

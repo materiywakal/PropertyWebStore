@@ -1,0 +1,44 @@
+﻿@model List<WebApp.Models.Message>
+@{
+    ViewBag.Title = "Chat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="@Url.Content("~/Content/MyCSS/Chat.css")" rel="stylesheet" type="text/css" />
+<script defer src="~/Scripts/jquery.signalR-2.3.0.min.js"></script>
+<script defer src="~/signalr/hubs"></script>
+<script defer src="~/Scripts/MyScripts/Chat.js"></script>
+
+<div>
+    <div class="publcontent chat">
+        @foreach (var item in Model)
+        {
+            if (item.User.Email == User.Identity.Name)
+            {
+                <div class="message rightside">
+                    @Html.DisplayFor(m => item.Text)
+                    <div class="messageDate">
+                        @Html.DisplayFor(m => item.HoursAndMinutes)
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="message leftside">
+                    @Html.DisplayFor(m => item.Text)
+                    <div class="messageDate">
+                        @Html.DisplayFor(m => item.HoursAndMinutes)
+                    </div>
+                </div>
+            }
+        }
+    </div>
+    <div class="publcontent">
+        <div align="right">@Html.TextBox("message")</div>
+    </div>
+    <div class="publcontent" id="sendmessage">
+        Отправить
+    </div>
+    <input id="User1Id" name="User1Id" type="hidden" value="@ViewBag.User1Id" />
+    <input id="User2Id" name="User2Id" type="hidden" value="@ViewBag.User2Id" />
+</div>

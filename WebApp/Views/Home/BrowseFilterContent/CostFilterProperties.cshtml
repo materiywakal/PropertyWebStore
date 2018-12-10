@@ -1,0 +1,8 @@
+﻿@model WebApp.ViewModels.BrowseFilterModel
+
+<div>
+    @Html.Label("Цена от ")
+    @Html.EditorFor(m => m.MinCost)
+    @Html.Label(" до ")
+    @Html.EditorFor(m => m.MaxCost)
+</div>

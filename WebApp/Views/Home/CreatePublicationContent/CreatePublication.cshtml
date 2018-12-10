@@ -1,0 +1,32 @@
+﻿@model WebApp.ViewModels.CreatePublicationModel
+@{
+    ViewBag.Title = "CreatePublication";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script defer src="~/Scripts/MyScripts/CreatePublication.js"></script>
+<script defer src="https://api-maps.yandex.ru/2.0/?apikey=271bbac4-94da-43a8-b5a4-90fa6966b4d0&load=package.full&lang=ru-RU" type="text/javascript"></script>
+<script defer src="~/Scripts/MyScripts/CreatePublicationMap.js"></script>
+
+<div class="publcontent">
+    @using (Html.BeginForm("CreatePublication", "Home", FormMethod.Post, new { encType = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(m => m.Id);
+        @Html.HiddenFor(m => m.UserId);
+        <div>Тип недвижимости  @Html.DropDownListFor(m => m.PropertyTypeId, ViewBag.PropertyTypes as SelectList, new { @id = "proptype" })</div> <br />
+        <div id="propcontent">
+            @Html.Action("ContentForFlat")
+        </div>
+        @Html.TextBoxFor(m => m.Files, new { type = "file", multiple = "multiple", name = "Files", accept = "image/x-png,image/gif,image/jpeg" })
+        <div>Описание @Html.EditorFor(m => m.Description)</div>
+        <div>Цена @Html.EditorFor(m => m.Cost)</div>
+        <div>Адрес @Html.TextBoxFor(m => m.Address, new { @style = "width: 300px" })</div>
+        @Html.HiddenFor(m => m.Coordinates);
+        <div id="yandexMap" style="width:600px; height:600px;"></div>
+        <input type="submit" value="Готово." />
+        <div>
+            @Html.ValidationSummary(true)
+        </div>
+    }
+</div>
+

@@ -1,0 +1,12 @@
+﻿@model WebApp.ViewModels.BrowseFilterModel
+
+<div>
+    @Html.Label("Продажа")
+    @Html.CheckBoxFor(m => m.IsRent, false)
+</div>
+<div>
+    @Html.Label("Количество комнат от")
+    @Html.EditorFor(m => m.MinRoomAmount)
+    @Html.Label("до")
+    @Html.EditorFor(m => m.MaxRoomAmount)
+</div>

@@ -1,0 +1,13 @@
+﻿@model  WebApp.Models.Publication
+
+<div>Продажа @Html.RadioButtonFor(m => m.IsRent, false, new { @checked="checked" }) Сдача @Html.RadioButtonFor(m => m.IsRent, true)</div>
+<div>Этаж @Html.EditorFor(m => m.Floor) </div>
+<div>Количество комнат @Html.EditorFor(m => m.RoomAmount)</div>
+<div>Общая площадь @Html.EditorFor(m => m.TotalArea)</div>
+<div>Жилая площадь @Html.EditorFor(m => m.LivingArea)</div>
+<div>Площадь кухни @Html.EditorFor(m => m.KitchenArea)</div>
+<div>Тип дома @Html.DropDownListFor(m => m.BlockOfFlatsTypeId, ViewBag.BlockOfFlatsTypes as SelectList)</div>
+<div>Санузел @Html.DropDownListFor(m => m.BathroomTypeId, ViewBag.BathroomTypes as SelectList)</div>
+<div>Тип балкона @Html.DropDownListFor(m => m.BalconyTypeId, ViewBag.BalconyTypes as SelectList)</div>
+<div>Год постройки @Html.EditorFor(m => m.YearOfConstruction)</div>
+<div>Возможность обмена @Html.CheckBoxFor(m => m.CanExchange)</div>

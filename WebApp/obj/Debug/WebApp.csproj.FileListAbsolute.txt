@@ -1,0 +1,690 @@
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\ApplicationInsights.config
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\WebApp.dll.config
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\WebApp.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\WebApp.pdb
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\csc.exe
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\csc.exe.config
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\csc.rsp
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\csi.exe
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\csi.exe.config
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\csi.rsp
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.AppContext.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.Collections.Immutable.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.Console.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.Diagnostics.Process.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.IO.Compression.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.IO.FileSystem.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.IO.Pipes.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.Security.AccessControl.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.Security.Claims.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.Threading.Thread.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.ValueTuple.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.Xml.XPath.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\vbc.exe
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\vbc.exe.config
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\vbc.rsp
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\VBCSCompiler.exe
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\roslyn\VBCSCompiler.exe.config
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\Antlr3.Runtime.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\EntityFramework.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\EntityFramework.SqlServer.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\Microsoft.AI.Web.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\Microsoft.AI.WindowsServer.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\Microsoft.ApplicationInsights.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\Microsoft.Web.Infrastructure.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\Newtonsoft.Json.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\System.Diagnostics.DiagnosticSource.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\System.Web.Helpers.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\System.Web.Mvc.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\System.Web.Optimization.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\System.Web.Razor.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\System.Web.WebPages.Deployment.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\System.Web.WebPages.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\System.Web.WebPages.Razor.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\WebGrease.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\EntityFramework.xml
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\EntityFramework.SqlServer.xml
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\System.Web.Helpers.xml
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\System.Web.Mvc.xml
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\System.Web.Optimization.xml
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\System.Web.Razor.xml
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\System.Web.WebPages.xml
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\System.Web.WebPages.Deployment.xml
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\System.Web.WebPages.Razor.xml
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\Newtonsoft.Json.xml
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\Antlr3.Runtime.pdb
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\System.Diagnostics.DiagnosticSource.xml
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\Microsoft.AI.WindowsServer.xml
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\Microsoft.AI.Web.xml
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\ru\System.Web.Helpers.resources.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\ru\System.Web.Mvc.resources.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\ru\System.Web.Optimization.resources.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\ru\System.Web.Razor.resources.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\ru\System.Web.WebPages.resources.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\ru\System.Web.WebPages.Deployment.resources.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\bin\ru\System.Web.WebPages.Razor.resources.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\obj\Debug\WebApp.csprojAssemblyReference.cache
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\obj\Debug\WebApp.csproj.CoreCompileInputs.cache
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\obj\Debug\WebApp.csproj.CopyComplete
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\obj\Debug\WebApp.dll
+c:\users\admin\documents\visual studio 2017\Projects\WebApp\WebApp\obj\Debug\WebApp.pdb
+D:\Projects\PropertyWebStore\WebApp\bin\ApplicationInsights.config
+D:\Projects\PropertyWebStore\WebApp\bin\WebApp.dll.config
+D:\Projects\PropertyWebStore\WebApp\bin\WebApp.dll
+D:\Projects\PropertyWebStore\WebApp\bin\WebApp.pdb
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\csc.exe
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\csc.exe.config
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\csc.rsp
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\csi.exe
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\csi.exe.config
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\csi.rsp
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.AppContext.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.Collections.Immutable.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.Console.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.Diagnostics.Process.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.IO.Compression.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.IO.FileSystem.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.IO.Pipes.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.Security.AccessControl.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.Security.Claims.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.Threading.Thread.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.ValueTuple.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.Xml.XPath.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\vbc.exe
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\vbc.exe.config
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\vbc.rsp
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\VBCSCompiler.exe
+D:\Projects\PropertyWebStore\WebApp\bin\roslyn\VBCSCompiler.exe.config
+D:\Projects\PropertyWebStore\WebApp\bin\Antlr3.Runtime.dll
+D:\Projects\PropertyWebStore\WebApp\bin\EntityFramework.dll
+D:\Projects\PropertyWebStore\WebApp\bin\EntityFramework.SqlServer.dll
+D:\Projects\PropertyWebStore\WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Projects\PropertyWebStore\WebApp\bin\Microsoft.AI.DependencyCollector.dll
+D:\Projects\PropertyWebStore\WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Projects\PropertyWebStore\WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Projects\PropertyWebStore\WebApp\bin\Microsoft.AI.Web.dll
+D:\Projects\PropertyWebStore\WebApp\bin\Microsoft.AI.WindowsServer.dll
+D:\Projects\PropertyWebStore\WebApp\bin\Microsoft.ApplicationInsights.dll
+D:\Projects\PropertyWebStore\WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\Projects\PropertyWebStore\WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects\PropertyWebStore\WebApp\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\PropertyWebStore\WebApp\bin\Newtonsoft.Json.dll
+D:\Projects\PropertyWebStore\WebApp\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Projects\PropertyWebStore\WebApp\bin\System.Web.Helpers.dll
+D:\Projects\PropertyWebStore\WebApp\bin\System.Web.Mvc.dll
+D:\Projects\PropertyWebStore\WebApp\bin\System.Web.Optimization.dll
+D:\Projects\PropertyWebStore\WebApp\bin\System.Web.Razor.dll
+D:\Projects\PropertyWebStore\WebApp\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\PropertyWebStore\WebApp\bin\System.Web.WebPages.dll
+D:\Projects\PropertyWebStore\WebApp\bin\System.Web.WebPages.Razor.dll
+D:\Projects\PropertyWebStore\WebApp\bin\WebGrease.dll
+D:\Projects\PropertyWebStore\WebApp\bin\EntityFramework.xml
+D:\Projects\PropertyWebStore\WebApp\bin\EntityFramework.SqlServer.xml
+D:\Projects\PropertyWebStore\WebApp\bin\System.Web.Helpers.xml
+D:\Projects\PropertyWebStore\WebApp\bin\System.Web.Mvc.xml
+D:\Projects\PropertyWebStore\WebApp\bin\System.Web.Optimization.xml
+D:\Projects\PropertyWebStore\WebApp\bin\System.Web.Razor.xml
+D:\Projects\PropertyWebStore\WebApp\bin\System.Web.WebPages.xml
+D:\Projects\PropertyWebStore\WebApp\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\PropertyWebStore\WebApp\bin\System.Web.WebPages.Razor.xml
+D:\Projects\PropertyWebStore\WebApp\bin\Newtonsoft.Json.xml
+D:\Projects\PropertyWebStore\WebApp\bin\Antlr3.Runtime.pdb
+D:\Projects\PropertyWebStore\WebApp\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Projects\PropertyWebStore\WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\Projects\PropertyWebStore\WebApp\bin\Microsoft.AI.DependencyCollector.xml
+D:\Projects\PropertyWebStore\WebApp\bin\Microsoft.AI.WindowsServer.xml
+D:\Projects\PropertyWebStore\WebApp\bin\Microsoft.AI.Web.xml
+D:\Projects\PropertyWebStore\WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projects\PropertyWebStore\WebApp\bin\ru\System.Web.Helpers.resources.dll
+D:\Projects\PropertyWebStore\WebApp\bin\ru\System.Web.Mvc.resources.dll
+D:\Projects\PropertyWebStore\WebApp\bin\ru\System.Web.Optimization.resources.dll
+D:\Projects\PropertyWebStore\WebApp\bin\ru\System.Web.Razor.resources.dll
+D:\Projects\PropertyWebStore\WebApp\bin\ru\System.Web.WebPages.resources.dll
+D:\Projects\PropertyWebStore\WebApp\bin\ru\System.Web.WebPages.Deployment.resources.dll
+D:\Projects\PropertyWebStore\WebApp\bin\ru\System.Web.WebPages.Razor.resources.dll
+D:\Projects\PropertyWebStore\WebApp\obj\Debug\WebApp.csprojAssemblyReference.cache
+D:\Projects\PropertyWebStore\WebApp\obj\Debug\WebApp.csproj.CoreCompileInputs.cache
+D:\Projects\PropertyWebStore\WebApp\obj\Debug\WebApp.csproj.CopyComplete
+D:\Projects\PropertyWebStore\WebApp\obj\Debug\WebApp.dll
+D:\Projects\PropertyWebStore\WebApp\obj\Debug\WebApp.pdb
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\ApplicationInsights.config
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\WebApp.dll.config
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\WebApp.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\WebApp.pdb
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\csc.exe
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\csc.exe.config
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\csc.rsp
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\csi.exe
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\csi.exe.config
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\csi.rsp
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.AppContext.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Console.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.IO.Compression.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Security.Claims.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Threading.Thread.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.ValueTuple.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\vbc.exe
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\vbc.exe.config
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\vbc.rsp
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\VBCSCompiler.exe
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\Antlr3.Runtime.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\EntityFramework.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\EntityFramework.SqlServer.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AI.Web.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\Newtonsoft.Json.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\System.Web.Helpers.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\System.Web.Mvc.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\System.Web.Optimization.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\System.Web.Razor.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\System.Web.WebPages.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\System.Web.WebPages.Razor.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\WebGrease.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\EntityFramework.xml
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\EntityFramework.SqlServer.xml
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\System.Web.Helpers.xml
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\System.Web.Mvc.xml
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\System.Web.Optimization.xml
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\System.Web.Razor.xml
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\System.Web.WebPages.xml
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\System.Web.WebPages.Razor.xml
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\Newtonsoft.Json.xml
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\Antlr3.Runtime.pdb
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AI.Web.xml
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\ru\System.Web.Optimization.resources.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\ru\System.Web.Razor.resources.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\ru\System.Web.WebPages.resources.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\bin\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\obj\Debug\WebApp.csprojAssemblyReference.cache
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\obj\Debug\WebApp.csproj.CoreCompileInputs.cache
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\obj\Debug\WebApp.csproj.CopyComplete
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\obj\Debug\WebApp.dll
+C:\Users\Никита\Desktop\PropertyWebStore\WebApp\obj\Debug\WebApp.pdb
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\ApplicationInsights.config
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\WebApp.dll.config
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\WebApp.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\WebApp.pdb
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\csc.exe
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\csc.exe.config
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\csc.rsp
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\csi.exe
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\csi.exe.config
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\csi.rsp
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.AppContext.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Collections.Immutable.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Console.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Diagnostics.Process.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.IO.Compression.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.IO.FileSystem.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.IO.Pipes.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Reflection.Metadata.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Security.AccessControl.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Security.Claims.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Threading.Thread.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.ValueTuple.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Xml.XPath.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\vbc.exe
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\vbc.exe.config
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\vbc.rsp
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\VBCSCompiler.exe
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\VBCSCompiler.exe.config
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Antlr3.Runtime.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\EntityFramework.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\EntityFramework.SqlServer.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AI.DependencyCollector.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AI.Web.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AI.WindowsServer.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.ApplicationInsights.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Web.Infrastructure.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Newtonsoft.Json.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Diagnostics.DiagnosticSource.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.Helpers.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.Mvc.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.Optimization.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.Razor.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.WebPages.Deployment.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.WebPages.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.WebPages.Razor.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\WebGrease.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\EntityFramework.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\EntityFramework.SqlServer.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.Helpers.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.Mvc.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.Optimization.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.Razor.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.WebPages.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.WebPages.Deployment.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.WebPages.Razor.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Newtonsoft.Json.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Antlr3.Runtime.pdb
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Diagnostics.DiagnosticSource.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AI.DependencyCollector.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AI.WindowsServer.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AI.Web.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\ru\System.Web.Helpers.resources.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\ru\System.Web.Mvc.resources.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\ru\System.Web.Optimization.resources.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\ru\System.Web.Razor.resources.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\ru\System.Web.WebPages.resources.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\ru\System.Web.WebPages.Deployment.resources.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\ru\System.Web.WebPages.Razor.resources.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.csprojAssemblyReference.cache
+E:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.csproj.CoreCompileInputs.cache
+E:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.csproj.CopyComplete
+E:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.pdb
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\ApplicationInsights.config
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\WebApp.dll.config
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\WebApp.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\WebApp.pdb
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\csc.exe
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\csc.exe.config
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\csc.rsp
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\csi.exe
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\csi.exe.config
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\csi.rsp
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.AppContext.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Collections.Immutable.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Console.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Diagnostics.Process.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.IO.Compression.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.IO.FileSystem.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.IO.Pipes.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Reflection.Metadata.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Security.AccessControl.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Security.Claims.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Threading.Thread.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.ValueTuple.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Xml.XPath.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\vbc.exe
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\vbc.exe.config
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\vbc.rsp
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\VBCSCompiler.exe
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\roslyn\VBCSCompiler.exe.config
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Antlr3.Runtime.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\EntityFramework.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\EntityFramework.SqlServer.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AI.DependencyCollector.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AI.Web.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AI.WindowsServer.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.ApplicationInsights.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Web.Infrastructure.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Newtonsoft.Json.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Diagnostics.DiagnosticSource.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.Helpers.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.Mvc.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.Optimization.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.Razor.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.WebPages.Deployment.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.WebPages.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.WebPages.Razor.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\WebGrease.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\EntityFramework.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\EntityFramework.SqlServer.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.Helpers.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.Mvc.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.Optimization.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.Razor.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.WebPages.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.WebPages.Deployment.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Web.WebPages.Razor.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Newtonsoft.Json.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Antlr3.Runtime.pdb
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\System.Diagnostics.DiagnosticSource.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AI.DependencyCollector.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AI.WindowsServer.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AI.Web.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\ru\System.Web.Helpers.resources.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\ru\System.Web.Mvc.resources.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\ru\System.Web.Optimization.resources.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\ru\System.Web.Razor.resources.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\ru\System.Web.WebPages.resources.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\ru\System.Web.WebPages.Deployment.resources.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\ru\System.Web.WebPages.Razor.resources.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.csprojAssemblyReference.cache
+F:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.csproj.CoreCompileInputs.cache
+F:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.csproj.CopyComplete
+F:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.pdb
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\PagedList.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\PagedList.Mvc.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\PagedList.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\PagedList.Mvc.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\PagedList.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\PagedList.Mvc.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\PagedList.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\PagedList.Mvc.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.csproj.GenerateResource.cache
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\ApplicationInsights.config
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\WebApp.dll.config
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\WebApp.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\WebApp.pdb
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\csc.exe
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\csc.exe.config
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\csc.rsp
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\csi.exe
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\csi.exe.config
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\csi.rsp
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.AppContext.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Console.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.IO.Compression.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.IO.Pipes.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Security.Claims.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Threading.Thread.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.ValueTuple.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Xml.XPath.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\vbc.exe
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\vbc.exe.config
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\vbc.rsp
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\VBCSCompiler.exe
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\Antlr3.Runtime.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\EntityFramework.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\EntityFramework.SqlServer.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AI.Web.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\Microsoft.ApplicationInsights.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\Newtonsoft.Json.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\PagedList.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\PagedList.Mvc.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\System.Web.Helpers.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\System.Web.Mvc.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\System.Web.Optimization.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\System.Web.Razor.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\System.Web.WebPages.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\System.Web.WebPages.Razor.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\WebGrease.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\EntityFramework.xml
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\EntityFramework.SqlServer.xml
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\PagedList.xml
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\PagedList.Mvc.xml
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\System.Web.Helpers.xml
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\System.Web.Mvc.xml
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\System.Web.Optimization.xml
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\System.Web.Razor.xml
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\System.Web.WebPages.xml
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\System.Web.WebPages.Razor.xml
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\Newtonsoft.Json.xml
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\Antlr3.Runtime.pdb
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\Microsoft.AI.Web.xml
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\ru\System.Web.Optimization.resources.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\ru\System.Web.Razor.resources.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\ru\System.Web.WebPages.resources.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\bin\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\obj\Debug\WebApp.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\obj\Debug\WebApp.Migrations.initial.resources
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\obj\Debug\WebApp.csproj.GenerateResource.cache
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\obj\Debug\WebApp.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\obj\Debug\WebApp.csproj.CopyComplete
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\obj\Debug\WebApp.dll
+C:\Users\admin\Desktop\PropertyWebStore\WebApp\obj\Debug\WebApp.pdb
+D:\Projects\PropertyWebStore\WebApp\bin\PagedList.dll
+D:\Projects\PropertyWebStore\WebApp\bin\PagedList.Mvc.dll
+D:\Projects\PropertyWebStore\WebApp\bin\PagedList.xml
+D:\Projects\PropertyWebStore\WebApp\bin\PagedList.Mvc.xml
+D:\Projects\PropertyWebStore\WebApp\obj\Debug\WebApp.Migrations.initial.resources
+D:\Projects\PropertyWebStore\WebApp\obj\Debug\WebApp.csproj.GenerateResource.cache
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.Security.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Owin.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.Security.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.Identity.Core.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.Security.Cookies.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.Security.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Owin.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.Identity.Core.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.Security.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.Security.Cookies.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.Migrations.initial.resources
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.SignalR.Core.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.SignalR.Core.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.Migrations.initial.resources
+F:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.csproj.GenerateResource.cache

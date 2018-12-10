@@ -1,0 +1,54 @@
+﻿.publoutergrid {
+    display: grid;
+    grid-template-columns: 500px 200px;
+    grid-column-gap: 20px;
+}
+.publinnergrid {
+    display: grid;
+    grid-template-rows: 400px 200px 200px;
+}
+
+.publimage {
+    position: relative;
+    margin:auto;
+    vertical-align:middle;
+    grid-row:1;
+}
+
+#image {
+    margin: auto;
+    position:absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.userinfo {
+    margin:auto;
+    grid-row:1 / span 3;
+}
+
+.publproperties {
+    margin:auto;
+}
+
+.publdesk {
+    margin:auto;
+}
+
+.arrowbutton {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    font-size: 24pt;
+    font-weight: 700;
+}
+.left {
+    left: -35px;
+}
+.right {
+    right: -35px;
+}

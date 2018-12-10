@@ -1,0 +1,31 @@
+﻿@model WebApp.Models.LoginModel
+@{
+    ViewBag.Title = "Вход";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="publcontent">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div>
+            @Html.Label("E-mail")
+            @Html.EditorFor(m => m.Email)
+            @Html.ValidationMessageFor(m => m.Email)
+        </div>
+        <div>
+            @Html.Label("Пароль")
+            @Html.EditorFor(m => m.Password)
+            @Html.ValidationMessageFor(m => m.Password)
+        </div>
+        <div>
+            <input type="submit" value="Войти" />
+        </div>
+        <div>
+            Впервые на сайте? <a href="/Account/Register">Зарегистрируйтесь!</a>
+        </div>
+        <div>
+            @Html.ValidationSummary(true)
+        </div>
+    }
+</div>

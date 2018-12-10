@@ -1,0 +1,16 @@
+﻿.publgrid {
+    display:grid;
+    grid-template-columns: 150px 240px 110px;
+    width: 500px;
+}
+.publimage {
+    margin: auto;
+}
+.publaddress {
+    margin: auto;
+}
+.publdata {
+    font-size: 7pt;
+    margin: auto 0px 0px auto;
+}
+    
