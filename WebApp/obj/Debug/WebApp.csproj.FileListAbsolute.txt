@@ -688,3 +688,6 @@ E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.AspNet.SignalR.System
 E:\Projects\webstore\PropertyWebStore\WebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
 F:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.Migrations.initial.resources
 F:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.csproj.GenerateResource.cache
+E:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.Migrations.topkek.resources
+F:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.Migrations.topkek.resources
+F:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.Migrations.isActive.resources

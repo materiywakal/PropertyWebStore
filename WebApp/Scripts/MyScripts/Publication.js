@@ -1,4 +1,5 @@
 ﻿$(function () {
+
     switch ($("#proptype").val()) {
         case '1': Flat($("#publId").val()); break;
         case '2': Room($("#publId").val()); break;
@@ -9,6 +10,14 @@
     var currentImage = 1;
     var imagesAmount = 1;
     var publicationId = $("#publId").val();
+    $.ajax({
+        url: "/Home/ChangeAmountOfViews",
+        type: "POST",
+        data: "publicationId=" + publicationId,
+        success: function (data) {
+
+        }
+    });
     $.ajax({
         url: "/Home/ImagesAmount",
         async: false,

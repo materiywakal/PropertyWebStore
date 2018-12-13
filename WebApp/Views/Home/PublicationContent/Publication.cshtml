@@ -8,6 +8,7 @@
 
 @Html.HiddenFor(m=>m.PropertyTypeId,new { @id="proptype"})
 @Html.HiddenFor(m=>m.Id, new { @id="publId"})
+@Html.HiddenFor(m=>m.AmountOfPageViews, new { @id="amountOfViews"})
 <div class="publoutergrid">
     <div class="publcontent publinnergrid">
         <div class="publimage" style="width:350px; height:400px;">
@@ -28,6 +29,7 @@
                 Написать
             </div>
         </a>
+        <div id="viewsAmount" style="height:14px; position:relative;"><img src="~/Images/Resources/eye.png"/><span>@Model.AmountOfPageViews</span></div>
     </div>
 </div>
 

@@ -55,7 +55,6 @@ namespace WebApp.Models
         public int WallMaterialId { get; set; }
         public WallMaterial WallMaterial { get; set; }
 
-        public string PublicName { get; set; }
         public string Description { get; set; }
         public DateTime PostTime { get; set; }
         public float Cost { get; set; }
@@ -63,6 +62,10 @@ namespace WebApp.Models
         public string Coordinates { get; set; }
         public bool IsOneDayRent { get; set; }
         public bool CanExchange { get; set; }
+        public bool IsSelled { get; set; }
+        public bool IsApprovedByAdmin { get; set; } 
+        public bool IsActive { get; set; }
+        public int AmountOfPageViews { get; set; }
     }
     public class User
     {

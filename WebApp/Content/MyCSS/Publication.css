@@ -37,6 +37,20 @@
 .publdesk {
     margin:auto;
 }
+#viewsAmount {
+    color:dimgray;
+    font-size:8pt;
+}
+#viewsAmount > img {
+    position:absolute; 
+    width:25px;
+    height:25px;
+}
+#viewsAmount > span {
+    position: absolute;
+    left: 30px;
+    top: 6px;
+}
 
 .arrowbutton {
     display: inline-block;

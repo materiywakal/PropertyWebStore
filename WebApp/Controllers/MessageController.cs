@@ -26,7 +26,11 @@ namespace WebApp.Controllers
                         .ToList();
                     int pageSize = 10;
                     int pageNumber = page ?? 1;
-                    return View("AllChats", chats.OrderByDescending(x => x.Id).ToPagedList(pageNumber, pageSize));
+
+                    if (chats.Count == 0)
+                        return View("NoChatsYet");
+                    else
+                        return View("AllChats", chats.OrderByDescending(x => x.Id).ToPagedList(pageNumber, pageSize));
                 }
                 else
                 {

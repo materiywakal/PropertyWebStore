@@ -196,6 +196,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -205,6 +206,14 @@
     <Compile Include="Migrations\201812081630257_initial.cs" />
     <Compile Include="Migrations\201812081630257_initial.Designer.cs">
       <DependentUpon>201812081630257_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812120622058_topkek.cs" />
+    <Compile Include="Migrations\201812120622058_topkek.Designer.cs">
+      <DependentUpon>201812120622058_topkek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812131827136_isActive.cs" />
+    <Compile Include="Migrations\201812131827136_isActive.Designer.cs">
+      <DependentUpon>201812131827136_isActive.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\WebContex.cs" />
@@ -288,10 +297,13 @@
     <Content Include="Views\Home\BrowseFilterContent\HouseFilterProperties.cshtml" />
     <Content Include="Views\Home\BrowseFilterContent\CostFilterProperties.cshtml" />
     <Content Include="Views\Home\BrowseFilterContent\PropertyFilterProperties.cshtml" />
+    <Content Include="Views\Message\NoChatsYet.cshtml" />
+    <Content Include="Views\Home\MyPublications.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\Publication\" />
+    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Fonts\glyphicons-halflings-regular.woff2" />
@@ -315,6 +327,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201812081630257_initial.resx">
       <DependentUpon>201812081630257_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812120622058_topkek.resx">
+      <DependentUpon>201812120622058_topkek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812131827136_isActive.resx">
+      <DependentUpon>201812131827136_isActive.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -43,6 +43,7 @@ namespace WebApp.Controllers
                 .Include(p => p.BathroomType)
                 .Include(p => p.BalconyType)
                 .Include(p => p.WallMaterial);
+            publications = publications.Where(m => m.IsApprovedByAdmin && m.IsActive);
             int pageNumber = page ?? 1;
 
             ViewBag.PropertyTypes = new SelectList(db.PropertyTypes.ToList(), "Id", "Content");
@@ -59,6 +60,7 @@ namespace WebApp.Controllers
                 .Include(p => p.BathroomType)
                 .Include(p => p.BalconyType)
                 .Include(p => p.WallMaterial);
+            publications = publications.Where(m => m.IsApprovedByAdmin && m.IsActive);
 
             publications = ApplyFilters(model, publications);
             
@@ -164,6 +166,11 @@ namespace WebApp.Controllers
             var publication = db.Publications.Include(m => m.User).FirstOrDefault(m => m.Id == id);
             if (publication == null)
                 return HttpNotFound();
+            if(User.Identity.IsAuthenticated)
+                if (db.Users.Where(m=>m.Email == User.Identity.Name).FirstOrDefault()!=null)
+                    return View("PublicationContent/Publication", publication);
+            if (!publication.IsApprovedByAdmin || !publication.IsActive)
+                return HttpNotFound();
             return View("PublicationContent/Publication", publication);
         }
         public ActionResult PublicationFlat(int id)
@@ -190,7 +197,15 @@ namespace WebApp.Controllers
         }
         public ActionResult ImagesAmount(int publicationId)
         {
-            int count = Directory.GetFiles(Server.MapPath("~/Images/Publication/" + publicationId + "/")).Count();
+            int count;
+            try
+            {
+                count = Directory.GetFiles(Server.MapPath("~/Images/Publication/" + publicationId + "/")).Count();
+            }
+            catch
+            {
+                count = 0;
+            }
             return Json(count, JsonRequestBehavior.AllowGet);
         }
         public ActionResult ReturnImagePathAndNumber(int currentImage, int publicationId, bool isLeft)
@@ -215,6 +230,38 @@ namespace WebApp.Controllers
             }
             array = new object[] { "/Images/Publication/" + publicationId + "/" + currentImage + ".jpg", currentImage };
             return Json(array, JsonRequestBehavior.AllowGet);
+        }
+        [HttpPost]
+        public ActionResult ChangeAmountOfViews(int publicationId)
+        {
+            db.Publications.Where(m => m.Id == publicationId).FirstOrDefault().AmountOfPageViews += 1;
+            db.SaveChanges();
+            return Json(true, JsonRequestBehavior.AllowGet);
+        }
+        #endregion
+
+        #region MyPublications
+        public ActionResult MyPublications(int? page)
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                var publications = db.Publications.Include(p => p.User)
+                    .Include(p => p.PropertyType)
+                    .Include(p => p.BlockOfFlatsType)
+                    .Include(p => p.BathroomType)
+                    .Include(p => p.BalconyType)
+                    .Include(p => p.WallMaterial);
+                publications = publications.Where(m => m.User.Email == User.Identity.Name);
+                int pageNumber = page ?? 1;
+
+                ViewBag.PropertyTypes = new SelectList(db.PropertyTypes.ToList(), "Id", "Content");
+
+                return View(publications.OrderByDescending(x => x.Id).ToList().ToPagedList(pageNumber, pageSize));
+            }
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
         }
         #endregion
 

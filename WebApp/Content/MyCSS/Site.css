@@ -78,12 +78,11 @@ a:active {
 .publcontent {
     font-size: 12pt;
     text-align: justify;
-    /*max-width: 400px;*/
     background-color: white;
     color: dimgrey;
     padding: 10px 10px 10px 10px;
     box-shadow: 5px 5px 0px rgb(128, 128, 128);
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
 
 .submenu {
