@@ -262,6 +262,7 @@
     <Content Include="Scripts\MyScripts\IndexMap.js" />
     <Content Include="Scripts\MyScripts\IndexPageText.js" />
     <Content Include="Scripts\MyScripts\LoginLabel.js" />
+    <Content Include="Scripts\MyScripts\MyPublications.js" />
     <Content Include="Scripts\MyScripts\Publication.js" />
     <Content Include="Scripts\MyScripts\CreatePublicationMap.js" />
     <Content Include="Web.config" />

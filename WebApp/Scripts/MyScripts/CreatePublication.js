@@ -1,4 +1,5 @@
 ﻿$(function () {
+    var id = $("#Id").val();
     $("#proptype").change(function () {
         $("#propcontent").empty();
         var value = $(this).val();
@@ -13,7 +14,7 @@
 
     function Flat() {
         $.ajax({
-            url: "/Home/ContentForFlat",
+            url: "/Home/ContentForFlat/" + id,
             dataType: 'html',
             success: function (data) {
                 $('#propcontent').html(data);
@@ -22,7 +23,7 @@
     }
     function Room() {
         $.ajax({
-            url: "/Home/ContentForRoom",
+            url: "/Home/ContentForRoom/" + id,
             dataType: 'html',
             success: function (data) {
                 $('#propcontent').html(data);
@@ -31,7 +32,7 @@
     }
     function House() {
         $.ajax({
-            url: "/Home/ContentForHouse",
+            url: "/Home/ContentForHouse/" + id,
             dataType: 'html',
             success: function (data) {
                 $('#propcontent').html(data);
@@ -40,7 +41,7 @@
     }
     function Property() {
         $.ajax({
-            url: "/Home/ContentForProperty",
+            url: "/Home/ContentForProperty/" + id,
             dataType: 'html',
             success: function (data) {
                 $('#propcontent').html(data);

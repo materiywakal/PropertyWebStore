@@ -33,6 +33,9 @@
             <div class="publdata">@Html.DisplayFor(m => item.PostTime)</div>
         </div>
     </a>
+    <a id="active" href="/Home/ActivePublication/@item.Id">Активация</a>
+    <a href="/Home/EditPublication/@item.Id">Редактировать</a>
+    <a id="delete" href="/Home/DeletePublication/@item.Id">Удалить</a>
 </div>
 }
 <div align="center">

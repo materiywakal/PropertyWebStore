@@ -1,8 +1,8 @@
-﻿@model  WebApp.Models.Publication
+﻿@model  WebApp.ViewModels.CreatePublicationModel
 
 <div>Этаж @Html.EditorFor(m => m.Floor) </div>
 <div>Количество комнат @Html.EditorFor(m => m.RoomAmount)</div>
 <div>Количество предлагаемых комнат @Html.EditorFor(m => m.OfferingRoomAmount)</div>
 <div>Проходная @Html.RadioButtonFor(m => m.IsPassageRoom, true) С отдельным входом @Html.RadioButtonFor(m => m.IsPassageRoom, false, new { @checked = "checked" }) </div>
-<div>Наличие мебели @Html.CheckBoxFor(m=>m.IsFurnitureExist)</div>
+<div>Наличие мебели @Html.CheckBoxFor(m => m.IsFurnitureExist)</div>
 <div>Сдача посуточно @Html.RadioButtonFor(m => m.IsOneDayRent, true) на длительный срок @Html.RadioButtonFor(m => m.IsOneDayRent, false, new { @checked = "checked" }) </div>

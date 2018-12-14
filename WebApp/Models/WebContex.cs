@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.Entity;
+using WebApp.ViewModels;
 
 namespace WebApp.Models
 {
@@ -66,6 +67,79 @@ namespace WebApp.Models
         public bool IsApprovedByAdmin { get; set; } 
         public bool IsActive { get; set; }
         public int AmountOfPageViews { get; set; }
+
+        public Publication()
+        {
+
+        }
+
+        public Publication(CreatePublicationModel model)
+        { 
+            Id = model.Id;
+            PropertyTypeId = model.PropertyTypeId;
+            if (model.BalconyTypeId == 0)
+            {
+                BalconyTypeId = 1;
+            }
+            else
+            {
+                BalconyTypeId = model.BalconyTypeId;
+            }
+
+            if (model.BathroomTypeId == 0)
+            {
+                BathroomTypeId = 1;
+            }
+            else
+            {
+                BathroomTypeId = model.BathroomTypeId;
+            }
+
+            if (model.BlockOfFlatsTypeId == 0)
+            {
+                BlockOfFlatsTypeId = 1;
+            }
+            else
+            {
+                BlockOfFlatsTypeId = model.BathroomTypeId;
+            }
+
+            if (model.WallMaterialId == 0)
+            {
+                WallMaterialId = 1;
+            }
+            else
+            {
+                WallMaterialId = model.WallMaterialId;
+            }
+
+            if (model.UserId == 0)
+            {
+                UserId = 1;
+            }
+            else
+            {
+                UserId = model.UserId;
+            }
+            IsRent = model.IsRent;
+            IsPassageRoom = model.IsPassageRoom;
+            IsOneDayRent = model.IsOneDayRent;
+            IsFurnitureExist = model.IsFurnitureExist;
+            Floor = model.Floor;
+            Address = model.Address;
+            Coordinates = model.Coordinates;
+            Cost = model.Cost;
+            Description = model.Description;
+            TotalArea = model.TotalArea;
+            LivingArea = model.LivingArea;
+            KitchenArea = model.KitchenArea;
+            PropertyArea = model.PropertyArea;
+            YearOfConstruction = model.YearOfConstruction;
+            CanExchange = model.CanExchange;
+            RoomAmount = model.RoomAmount;
+            OfferingRoomAmount = model.OfferingRoomAmount;
+            PostTime = DateTime.Now;
+        }
     }
     public class User
     {

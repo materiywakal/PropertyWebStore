@@ -263,133 +263,166 @@ namespace WebApp.Controllers
                 return RedirectToAction("Login", "Account");
             }
         }
+        public ActionResult ActivePublication(int? id)
+        {
+            if (id == null)
+                return Json(false, JsonRequestBehavior.AllowGet);
+            var publication = db.Publications.Where(m => m.Id == id).FirstOrDefault();
+            if (publication == null)
+                return Json(false, JsonRequestBehavior.AllowGet);
+            if (!User.Identity.IsAuthenticated)
+                return Json(false, JsonRequestBehavior.AllowGet);
+            var user = db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault();
+            if (user.Id == publication.UserId || user.RoleId == 2)
+            {
+                if (publication.IsApprovedByAdmin)
+                    publication.IsActive = !publication.IsActive;
+                else
+                    publication.IsActive = false;
+                db.SaveChanges();
+                return Json(true, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                return Json(false, JsonRequestBehavior.AllowGet);
+            }
+        }
+        public ActionResult EditPublication(int? id)
+        {
+            if (id == null)
+                return HttpNotFound();
+            var publication = db.Publications.Where(m => m.Id == id).FirstOrDefault();
+            if (publication == null)
+                return HttpNotFound();
+            if (!User.Identity.IsAuthenticated)
+                return HttpNotFound();
+            var user = db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault();
+            if (user.Id == publication.UserId || user.RoleId == 2)
+            {
+                return RedirectToAction("CreatePublication", "Home", new { id });
+            }
+            else
+            {
+                return HttpNotFound();
+            }
+        }
+        public ActionResult DeletePublication(int? id)
+        {
+            if (id == null)
+                return Json(false, JsonRequestBehavior.AllowGet);
+            var publication = db.Publications.Where(m => m.Id == id).FirstOrDefault();
+            if (publication == null)
+                return Json(false, JsonRequestBehavior.AllowGet);
+            if (!User.Identity.IsAuthenticated)
+                return Json(false, JsonRequestBehavior.AllowGet);
+            var user = db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault();
+            if (user.Id == publication.UserId || user.RoleId == 2)
+            {
+                db.Publications.Remove(publication);
+                db.SaveChanges();
+                return Json(true, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                return Json(false, JsonRequestBehavior.AllowGet);
+            }
+        }
         #endregion
 
         #region CreatePublication
-        public ActionResult CreatePublication()
+        public ActionResult CreatePublication(int? id)
         {
             ViewBag.PropertyTypes = new SelectList(db.PropertyTypes.ToList(), "Id", "Content");
-            return View("CreatePublicationContent/CreatePublication",
-                new CreatePublicationModel { UserId = db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault().Id });
+            if (id == null)
+            {
+                return View("CreatePublicationContent/CreatePublication",
+                    new CreatePublicationModel { UserId = db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault().Id });
+            }
+            else
+            {
+                return View("CreatePublicationContent/CreatePublication",
+                    new CreatePublicationModel(db.Publications.Where(m=>m.Id==id).FirstOrDefault()));
+            }
         }
         [HttpPost]
         public ActionResult CreatePublication(CreatePublicationModel publicationView)
         {
-            Publication publication = PublicationTransform(publicationView);
-            publication = db.Publications.Add(publication);
-            int count = 1;
-            foreach (var file in publicationView.Files)
+            Publication publication = new Publication(publicationView);
+            publication.IsApprovedByAdmin = false;
+            publication.IsActive = false;
+            if (db.Publications.Where(m=>m.Id==publication.Id) == null)
             {
-                if (file != null)
+                publication = db.Publications.Add(publication);
+                int count = 1;
+                foreach (var file in publicationView.Files)
                 {
-                    try
+                    if (file != null)
                     {
-                        System.IO.File.WriteAllBytes(Server.MapPath("~/Images/Publication/" + publication.Id + "/" + count + ".jpg"), ImageTransformation.Transform(file));
+                        try
+                        {
+                            System.IO.File.WriteAllBytes(Server.MapPath("~/Images/Publication/" + publication.Id + "/" + count + ".jpg"), ImageTransformation.Transform(file));
+                        }
+                        catch (IOException e)
+                        {
+                            Directory.CreateDirectory(Server.MapPath("~") + "/Images/Publication/" + publication.Id);
+                            System.IO.File.WriteAllBytes(Server.MapPath("~/Images/Publication/" + publication.Id + "/" + count + ".jpg"), ImageTransformation.Transform(file));
+                        }
+                        count++;
                     }
-                    catch (IOException e)
-                    {
-                        Directory.CreateDirectory(Server.MapPath("~") + "/Images/Publication/" + publication.Id);
-                        System.IO.File.WriteAllBytes(Server.MapPath("~/Images/Publication/" + publication.Id + "/" + count + ".jpg"), ImageTransformation.Transform(file));
-                    }
-                    count++;
                 }
+            }
+            else
+            {
+                db.Entry(publication).State = EntityState.Modified;
             }
             db.SaveChanges();
             return RedirectToAction("Browse");
         }
-        private Publication PublicationTransform(CreatePublicationModel model)
-        {
-            Publication publication = new Publication();
-
-            publication.Id = model.Id;
-            publication.PropertyTypeId = model.PropertyTypeId;
-            if (model.BalconyTypeId == 0)
-            {
-                publication.BalconyTypeId = 1;
-            }
-            else
-            {
-                publication.BalconyTypeId = model.BalconyTypeId;
-            }
-
-            if (model.BathroomTypeId == 0)
-            {
-                publication.BathroomTypeId = 1;
-            }
-            else
-            {
-                publication.BathroomTypeId = model.BathroomTypeId;
-            }
-
-            if (model.BlockOfFlatsTypeId == 0)
-            {
-                publication.BlockOfFlatsTypeId = 1;
-            }
-            else
-            {
-                publication.BlockOfFlatsTypeId = model.BathroomTypeId;
-            }
-
-            if (model.WallMaterialId == 0)
-            {
-                publication.WallMaterialId = 1;
-            }
-            else
-            {
-                publication.WallMaterialId = model.WallMaterialId;
-            }
-
-            if (model.UserId == 0)
-            {
-                publication.UserId = 1;
-            }
-            else
-            {
-                publication.UserId = model.UserId;
-            }
-
-            publication.IsRent = model.IsRent;
-            publication.IsPassageRoom = model.IsPassageRoom;
-            publication.IsOneDayRent = model.IsOneDayRent;
-            publication.IsFurnitureExist = model.IsFurnitureExist;
-            publication.Floor = model.Floor;
-            publication.Address = model.Address;
-            publication.Coordinates = model.Coordinates;
-            publication.Cost = model.Cost;
-            publication.Description = model.Description;
-            publication.TotalArea = model.TotalArea;
-            publication.LivingArea = model.LivingArea;
-            publication.KitchenArea = model.KitchenArea;
-            publication.PropertyArea = model.PropertyArea;
-            publication.YearOfConstruction = model.YearOfConstruction;
-            publication.CanExchange = model.CanExchange;
-            publication.RoomAmount = model.RoomAmount;
-            publication.OfferingRoomAmount = model.OfferingRoomAmount;
-            publication.PostTime = DateTime.Now;
-
-            return publication;
-        }
-        public ActionResult ContentForFlat()
+        public ActionResult ContentForFlat(int? id)
         {
             ViewBag.BlockOfFlatsTypes = new SelectList(db.BlockOfFlatsTypes.ToList(), "Id", "Content");
             ViewBag.BathroomTypes = new SelectList(db.BathroomTypes.ToList(), "Id", "Content");
             ViewBag.BalconyTypes = new SelectList(db.BalconyTypes.ToList(), "Id", "Content");
+            if (id != null)
+            {
+                var publication = db.Publications.Where(m => m.Id == id).FirstOrDefault();
+                if(publication!=null)
+                    return PartialView("CreatePublicationContent/ContentForFlat", new CreatePublicationModel(publication));
+            }
             return PartialView("CreatePublicationContent/ContentForFlat");
         }
-        public ActionResult ContentForRoom()
+        public ActionResult ContentForRoom(int? id)
         {
+            if (id != null)
+            {
+                var publication = db.Publications.Where(m => m.Id == id).FirstOrDefault();
+                if (publication != null)
+                    return PartialView("CreatePublicationContent/ContentForRoom", new CreatePublicationModel(publication));
+            }
             return PartialView("CreatePublicationContent/ContentForRoom");
         }
-        public ActionResult ContentForHouse()
+        public ActionResult ContentForHouse(int? id)
         {
             ViewBag.WallMaterials = new SelectList(db.WallMaterials.ToList(), "Id", "Content");
+            if (id != null)
+            {
+                var publication = db.Publications.Where(m => m.Id == id).FirstOrDefault();
+                if (publication != null)
+                    return PartialView("CreatePublicationContent/ContentForHouse", new CreatePublicationModel(publication));
+            }
             return PartialView("CreatePublicationContent/ContentForHouse");
         }
-        public ActionResult ContentForProperty()
+        public ActionResult ContentForProperty(int? id)
         {
             ViewBag.BlockOfFlatsTypes = new SelectList(db.BlockOfFlatsTypes.ToList(), "Id", "Content");
             ViewBag.BathroomTypes = new SelectList(db.BathroomTypes.ToList(), "Id", "Content");
             ViewBag.BalconyTypes = new SelectList(db.BalconyTypes.ToList(), "Id", "Content");
+            if (id != null)
+            {
+                var publication = db.Publications.Where(m => m.Id == id).FirstOrDefault();
+                if (publication != null)
+                    return PartialView("CreatePublicationContent/ContentForProperty", new CreatePublicationModel(publication));
+            }
             return PartialView("CreatePublicationContent/ContentForProperty");
         }
         #endregion

@@ -1,4 +1,4 @@
-﻿@model  WebApp.Models.Publication
+﻿@model  WebApp.ViewModels.CreatePublicationModel
 
 <div>Продажа @Html.RadioButtonFor(m => m.IsRent, false, new { @checked = "checked" }) Сдача @Html.RadioButtonFor(m => m.IsRent, true)</div>
 <div>Количество комнат @Html.EditorFor(m => m.RoomAmount)</div>

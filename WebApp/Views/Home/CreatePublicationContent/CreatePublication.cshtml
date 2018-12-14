@@ -13,15 +13,16 @@
         @Html.AntiForgeryToken()
         @Html.HiddenFor(m => m.Id);
         @Html.HiddenFor(m => m.UserId);
+        @Html.HiddenFor(m => m.Coordinates);
         <div>Тип недвижимости  @Html.DropDownListFor(m => m.PropertyTypeId, ViewBag.PropertyTypes as SelectList, new { @id = "proptype" })</div> <br />
         <div id="propcontent">
-            @Html.Action("ContentForFlat")
+            @Html.Action("ContentForFlat", new { id = 1 })
         </div>
         @Html.TextBoxFor(m => m.Files, new { type = "file", multiple = "multiple", name = "Files", accept = "image/x-png,image/gif,image/jpeg" })
         <div>Описание @Html.EditorFor(m => m.Description)</div>
         <div>Цена @Html.EditorFor(m => m.Cost)</div>
         <div>Адрес @Html.TextBoxFor(m => m.Address, new { @style = "width: 300px" })</div>
-        @Html.HiddenFor(m => m.Coordinates);
+
         <div id="yandexMap" style="width:600px; height:600px;"></div>
         <input type="submit" value="Готово." />
         <div>

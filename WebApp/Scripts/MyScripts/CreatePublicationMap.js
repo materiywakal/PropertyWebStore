@@ -5,7 +5,15 @@
             zoom: 11.5,
             behaviors: ['default', 'scrollZoom']
         });
-        var myPlacemark = new ymaps.Placemark([53.9, 27.56], {}, { preset: 'twirl#redIcon' });
+        var tryCords = $("#Coordinates").val();
+        var myPlacemark;
+        if (tryCords!=null) {
+            var arr = tryCords.split(',');
+            myPlacemark = new ymaps.Placemark([arr[0], arr[1]], {}, { preset: 'twirl#redIcon' });
+        }
+        else {
+            myPlacemark = new ymaps.Placemark([53.9, 27.56], {}, { preset: 'twirl#redIcon' });
+        }
         yandexMap.geoObjects.add(myPlacemark);
         yandexMap.controls.add('zoomControl', { right: '20px', top: '35px' });
         yandexMap.controls.add(new ymaps.control.TypeSelector());

@@ -21,6 +21,34 @@ namespace WebApp.ViewModels
         {
             Files = new List<HttpPostedFileBase>();
         }
+        public CreatePublicationModel(Publication publication)
+        {
+            Id = publication.Id;
+            UserId = publication.UserId;
+            PropertyTypeId = publication.PropertyTypeId;
+            IsRent = publication.IsRent;
+            Floor = publication.Floor;
+            RoomAmount = publication.RoomAmount;
+            OfferingRoomAmount = publication.OfferingRoomAmount;
+            IsPassageRoom = publication.IsPassageRoom;
+            IsFurnitureExist = publication.IsFurnitureExist;
+            TotalArea = publication.TotalArea;
+            LivingArea = publication.LivingArea;
+            KitchenArea = publication.KitchenArea;
+            PropertyArea = publication.PropertyArea;
+            BlockOfFlatsTypeId = publication.BlockOfFlatsTypeId;
+            BathroomTypeId = publication.BathroomTypeId;
+            BalconyTypeId = publication.BathroomTypeId;
+            YearOfConstruction = publication.YearOfConstruction;
+            WallMaterialId = publication.WallMaterialId;
+            Description = publication.Description;
+            PostTime = publication.PostTime;
+            Cost = publication.Cost;
+            Address = publication.Address;
+            Coordinates = publication.Coordinates;
+            IsOneDayRent = publication.IsOneDayRent;
+            CanExchange = publication.CanExchange;
+        }
         public List<HttpPostedFileBase> Files { get; set; }
 
         public bool IsRent { get; set; }
