@@ -3,21 +3,35 @@
 <div>Этаж @Html.DisplayFor(m => m.Floor) </div>
 <div>Количество комнат @Html.DisplayFor(m => m.RoomAmount)</div>
 <div>Количество предлагаемых комнат @Html.DisplayFor(m => m.OfferingRoomAmount)</div>
-@if(Model.IsPassageRoom) {
+@if (Model.IsPassageRoom)
+{
     <div>>Проходная</div>
 }
-else {
+else
+{
     <div>С отдельным входом</div>
 }
-@if(Model.IsFurnitureExist) {
+@if (Model.IsFurnitureExist)
+{
     <div>Есть мебель</div>
 }
-else {
+else
+{
     <div>Мебель отсутствует</div>
 }
-@if(Model.IsOneDayRent) {
+@if (Model.IsOneDayRent)
+{
     <div>Сдача посуточно</div>
 }
-else {
+else
+{
     <div>Сдача на длительный срок</div>
+}
+@if (Model.IsSubwayNear)
+{
+    <div>Метро рядом</div>
+}
+else
+{
+    <div>Рядом нет метро</div>
 }

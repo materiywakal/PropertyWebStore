@@ -1,9 +1,11 @@
 ﻿@model  WebApp.Models.Publication
 
-@if (Model.IsRent) {
+@if (Model.IsRent)
+{
     <div>Сдача</div>
 }
-else {
+else
+{
     <div>Продажа</div>
 }
 <div>Этаж @Html.DisplayFor(m => m.Floor) </div>
@@ -15,3 +17,11 @@ else {
 <div>Санузел @Html.DisplayFor(m => m.BathroomType.Content)</div>
 <div>Тип балкона @Html.DisplayFor(m => m.BalconyType.Content)</div>
 <div>Год постройки @Html.DisplayFor(m => m.YearOfConstruction)</div>
+@if (Model.IsSubwayNear)
+{
+    <div>Метро рядом</div>
+}
+else
+{
+    <div>Рядом нет метро</div>
+}

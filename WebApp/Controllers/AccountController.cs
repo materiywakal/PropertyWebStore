@@ -8,11 +8,13 @@ using WebApp.Models;
 using System.Web.Configuration;
 using System.Web.Helpers;
 using System.Net.Mail;
+using System.Data.Entity;
 
 namespace WebApp.Controllers
 {
     public class AccountController : Controller
     {
+        Models.WebContext db = new Models.WebContext();
         public ActionResult Login()
         {
             return View();
@@ -23,11 +25,7 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                User user = null;
-                using (WebContex db = new WebContex())
-                {
-                    user = db.Users.FirstOrDefault(m => m.Email == model.Email);
-                }
+                User user =  db.Users.FirstOrDefault(m => m.Email == model.Email);
                 if (user != null && Crypto.VerifyHashedPassword(user.Password, model.Password))
                 {
                     FormsAuthentication.SetAuthCookie(model.Email, true);
@@ -48,20 +46,12 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Register(RegisterModel model)
         {
-            User user = null;
-            using (WebContex db = new WebContex())
-            {
-                user = db.Users.FirstOrDefault(m => m.Email == model.Email);
-            }
+            User user = db.Users.FirstOrDefault(m => m.Email == model.Email);
             if (user == null)
             {
-                using (WebContex db = new WebContex())
-                {
-                    db.Users.Add(new User { Name = model.Name, Email = model.Email, Password = Crypto.HashPassword(model.Password), RoleId = 1 });
-                    db.SaveChanges();
-
-                    user = db.Users.Where(m => m.Email == model.Email).FirstOrDefault();
-                }
+                db.Users.Add(new User { Name = model.Name, Email = model.Email, Password = Crypto.HashPassword(model.Password), RoleId = 1 });
+                db.SaveChanges();
+                user = db.Users.Where(m => m.Email == model.Email).FirstOrDefault();
                 if (user != null)
                     if (Crypto.VerifyHashedPassword(user.Password, model.Password))
                     {
@@ -124,21 +114,34 @@ namespace WebApp.Controllers
 
         public ActionResult Account()
         {
-            WebContex db = new WebContex();
             return View(db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault());
         }
 
         [HttpPost]
         public ActionResult Account(User user)
         {
-            using (WebContex db = new WebContex())
-            {
-                var u = db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault();
-                u.Name = user.Name ?? u.Name;
-                u.Phone = user.Phone ?? u.Phone;
-                db.SaveChanges();
-            }
+            var u = db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault();
+            u.Name = user.Name ?? u.Name;
+            u.Phone = user.Phone ?? u.Phone;
+            db.SaveChanges();
             return RedirectToAction("Index", "Home");
+        }
+        public ActionResult Statistics()
+        {
+            if(User.Identity.IsAuthenticated)
+            {
+                var user = db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault();
+                if (user!=null)
+                {
+                    var publications = db.Publications.Include(m => m.User).Where(m => m.User.Email == User.Identity.Name);
+                    var chats = db.Chats.Include(m=>m.User1).Include(m=>m.User2).Where(m => m.User1Id == user.Id || m.User2Id == user.Id);
+                    ViewBag.Chats = chats.Include(m=>m.Messages);
+                    ViewBag.ChatsCount = chats.Count();
+                    ViewBag.UserId = user.Id;
+                    return View(publications);
+                }
+            }
+            return HttpNotFound();
         }
         public ActionResult IsAuthenticated()
         {
@@ -151,16 +154,15 @@ namespace WebApp.Controllers
         public ActionResult ReturnUsername()
         {
             if (User.Identity.IsAuthenticated)
-                using (WebContex db = new WebContex())
-                    try
-                    {
-                        string name = db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault().Name;
-                        return Json(name, JsonRequestBehavior.AllowGet);
-                    }
-                    catch
-                    {
-                        return Json("UserNotFound", JsonRequestBehavior.AllowGet);
-                    }
+                try
+                {
+                    string name = db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault().Name;
+                    return Json(name, JsonRequestBehavior.AllowGet);
+                }
+                catch
+                {
+                    return Json("UserNotFound", JsonRequestBehavior.AllowGet);
+                }
             else
                 return Json("Профиль", JsonRequestBehavior.AllowGet);
         }
@@ -168,7 +170,6 @@ namespace WebApp.Controllers
         public ActionResult ReturnUserId()
         {
             if (User.Identity.IsAuthenticated)
-                using (WebContex db = new WebContex())
                     try
                     {
                         return Json(db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault().Id, JsonRequestBehavior.AllowGet);
@@ -179,6 +180,22 @@ namespace WebApp.Controllers
                     }
             else
                 return Json("Guest", JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult IsAdmin()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                var user = db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault();
+                if (user != null)
+                {
+                    if (user.RoleId == 2)
+                    {
+                        return Json(true, JsonRequestBehavior.AllowGet);
+                    }
+                }
+            }
+            return Json(false, JsonRequestBehavior.AllowGet);
         }
 
     }

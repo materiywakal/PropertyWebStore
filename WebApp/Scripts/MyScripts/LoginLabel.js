@@ -23,10 +23,10 @@
 
 
     $('#navgrid > ul > li').hover(function (event) {
-            if ($('#name').html() != '<a href="/Account/Login">Логин</a>') {
-                $(this).children("ul").slideDown();
-            }
-        },
+        if ($('#name').html() != '<a href="/Account/Login">Логин</a>') {
+            $(this).children("ul").slideDown();
+        }
+    },
         function () {
             if ($('#name').html() != '<a href="/Account/Login">Логин</a>') {
                 $(this).children("ul").clearQueue();

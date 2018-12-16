@@ -9,3 +9,4 @@
 <div>Год постройки @Html.EditorFor(m => m.YearOfConstruction)</div>
 <div>Тип дома @Html.DropDownListFor(m => m.WallMaterialId, ViewBag.WallMaterials as SelectList)</div>
 <div>Возможность обмена @Html.CheckBoxFor(m => m.CanExchange)</div>
+<div>Рядом метро @Html.CheckBoxFor(m => m.IsSubwayNear)</div>

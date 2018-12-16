@@ -6,11 +6,12 @@
     <script defer type="text/javascript" src="~/Scripts/jquery.validate.min.js"></script>
     <script defer type="text/javascript" src="~/Scripts/jquery.validate.unobtrusive.js"></script>
     <script defer src="~/Scripts/MyScripts/LoginLabel.js"></script>
+    <script defer src="~/Scripts/MyScripts/AdminLabel.js"></script>
     <title>@ViewBag.Title</title>
 </head>
 <body class="mainpage" id="maingrid">
     <nav id="navgrid">
-        <ul>
+        <ul id="labels">
             <li><a href="~/Home/Index">Главная</a></li>
             <li><a href="~/Home/Browse">Обзор</a></li>
             <li>
@@ -19,17 +20,24 @@
                     <li><a href="/Home/CreatePublication">Добавить объявление</a></li>
                     <li><a href="/Home/MyPublications">Мои объявления</a></li>
                     <li><a href="/Message/Chat">Сообщения</a></li>
+                    <li><a href="/Account/Statistics">Статистика</a></li>
                     <li><a href="/Account/Account">Настройки</a></li>
                     <li><a href="/Account/Logoff">Выйти</a></li>
                 </ul>
             </li>
+            @*<li>
+                <span id="adminlabel">Администрирование</span>
+                <ul class="submenu">
+                    <li><a href="/Admin/UnconfirmedPublications">Проверка объявлений</a></li>
+                </ul>
+            </li>*@
         </ul>
     </nav>
     <main>
         @RenderBody()
     </main>
     <footer>
-        &copy;materiywakal 2018.
+        @*&copy;materiywakal 2018.*@
     </footer>
 </body>
 </html>

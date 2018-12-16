@@ -691,3 +691,4 @@ F:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.csproj.GenerateRes
 E:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.Migrations.topkek.resources
 F:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.Migrations.topkek.resources
 F:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.Migrations.isActive.resources
+F:\Projects\webstore\PropertyWebStore\WebApp\obj\Debug\WebApp.Migrations.probablyFinal.resources

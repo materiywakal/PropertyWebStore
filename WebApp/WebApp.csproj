@@ -215,8 +215,12 @@
     <Compile Include="Migrations\201812131827136_isActive.Designer.cs">
       <DependentUpon>201812131827136_isActive.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812160811028_probablyFinal.cs" />
+    <Compile Include="Migrations\201812160811028_probablyFinal.Designer.cs">
+      <DependentUpon>201812160811028_probablyFinal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\WebContex.cs" />
+    <Compile Include="Models\WebContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Util\ImageTransformation.cs" />
@@ -231,7 +235,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\MyCSS\Browse.css" />
     <Content Include="Content\MyCSS\Chat.css" />
+    <Content Include="Content\MyCSS\MyPublications.css" />
     <Content Include="Content\MyCSS\Publication.css" />
+    <Content Include="Content\MyCSS\Statistics.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
@@ -257,6 +263,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\MyScripts\AdminLabel.js" />
     <Content Include="Scripts\MyScripts\BrowseFilter.js" />
     <Content Include="Scripts\MyScripts\Chat.js" />
     <Content Include="Scripts\MyScripts\IndexMap.js" />
@@ -299,12 +306,14 @@
     <Content Include="Views\Home\BrowseFilterContent\CostFilterProperties.cshtml" />
     <Content Include="Views\Home\BrowseFilterContent\PropertyFilterProperties.cshtml" />
     <Content Include="Views\Message\NoChatsYet.cshtml" />
-    <Content Include="Views\Home\MyPublications.cshtml" />
+    <Content Include="Views\Home\MyPublications\MyPublications.cshtml" />
+    <Content Include="Views\Admin\UnconfirmedPublications.cshtml" />
+    <Content Include="Views\Account\Statistics.cshtml" />
+    <Content Include="Views\Home\MyPublications\DeletePublication.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\Publication\" />
-    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Fonts\glyphicons-halflings-regular.woff2" />
@@ -334,6 +343,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812131827136_isActive.resx">
       <DependentUpon>201812131827136_isActive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812160811028_probablyFinal.resx">
+      <DependentUpon>201812160811028_probablyFinal.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

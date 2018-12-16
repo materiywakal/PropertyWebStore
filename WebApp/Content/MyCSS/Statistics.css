@@ -1,0 +1,13 @@
+﻿div{
+    font-size:12pt;
+    font-weight:500;
+    text-align:left;
+}
+table {
+    border-collapse: collapse;
+}
+td{
+    border:2px solid white;
+    text-align:center;
+    word-wrap:break-word;
+}

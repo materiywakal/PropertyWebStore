@@ -12,7 +12,7 @@ namespace WebApp.Controllers
 {
     public class MessageController : Controller
     {
-        WebContex db = new WebContex();
+        Models.WebContext db = new Models.WebContext();
 
         public ActionResult Chat(int? id, int? page)
         {

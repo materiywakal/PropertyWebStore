@@ -16,7 +16,7 @@ namespace WebApp.Controllers
 {
     public class HomeController : Controller
     {
-        WebContex db = new WebContex();
+        Models.WebContext db = new Models.WebContext();
         const int pageSize = 8;
 
         #region Index
@@ -26,11 +26,11 @@ namespace WebApp.Controllers
         }
         public ActionResult ReturnPublications()
         {
-            return Json(db.Publications, JsonRequestBehavior.AllowGet);
+            return Json(db.Publications.Where(m => m.IsApprovedByAdmin && m.IsActive), JsonRequestBehavior.AllowGet);
         }
         public ActionResult ReturnPublicationsCount()
         {
-            return Json(db.Publications.Count(), JsonRequestBehavior.AllowGet);
+            return Json(db.Publications.Where(m => m.IsApprovedByAdmin && m.IsActive).Count(), JsonRequestBehavior.AllowGet);
         }
         #endregion
 
@@ -63,7 +63,7 @@ namespace WebApp.Controllers
             publications = publications.Where(m => m.IsApprovedByAdmin && m.IsActive);
 
             publications = ApplyFilters(model, publications);
-            
+
             int pageNumber = 1;
 
             ViewBag.PropertyTypes = new SelectList(db.PropertyTypes.ToList(), "Id", "Content");
@@ -78,7 +78,7 @@ namespace WebApp.Controllers
             {
                 case 1: return ApplyFilterForFlat(model, publications);
                 case 2: return ApplyFilterForRoom(model, publications);
-                case 3: return ApplyFilterForHouse(model, publications); 
+                case 3: return ApplyFilterForHouse(model, publications);
                 case 4: return ApplyFilterForProperty(model, publications);
                 default: return publications;
             }
@@ -166,8 +166,8 @@ namespace WebApp.Controllers
             var publication = db.Publications.Include(m => m.User).FirstOrDefault(m => m.Id == id);
             if (publication == null)
                 return HttpNotFound();
-            if(User.Identity.IsAuthenticated)
-                if (db.Users.Where(m=>m.Email == User.Identity.Name).FirstOrDefault()!=null)
+            if (User.Identity.IsAuthenticated)
+                if (db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault() != null)
                     return View("PublicationContent/Publication", publication);
             if (!publication.IsApprovedByAdmin || !publication.IsActive)
                 return HttpNotFound();
@@ -210,7 +210,15 @@ namespace WebApp.Controllers
         }
         public ActionResult ReturnImagePathAndNumber(int currentImage, int publicationId, bool isLeft)
         {
-            int count = Directory.GetFiles(Server.MapPath("~/Images/Publication/" + publicationId + "/")).Count();
+            int count;
+            try
+            {
+                count = Directory.GetFiles(Server.MapPath("~/Images/Publication/" + publicationId + "/")).Count();
+            }
+            catch
+            {
+                count = 0;
+            }
             object[] array;
             if (isLeft)
             {
@@ -234,6 +242,13 @@ namespace WebApp.Controllers
         [HttpPost]
         public ActionResult ChangeAmountOfViews(int publicationId)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                if (db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault() != null)
+                {
+                    return Json(false, JsonRequestBehavior.AllowGet);
+                }
+            }
             db.Publications.Where(m => m.Id == publicationId).FirstOrDefault().AmountOfPageViews += 1;
             db.SaveChanges();
             return Json(true, JsonRequestBehavior.AllowGet);
@@ -263,15 +278,15 @@ namespace WebApp.Controllers
                 return RedirectToAction("Login", "Account");
             }
         }
-        public ActionResult ActivePublication(int? id)
+        public ActionResult ActivePublication(int? id, int? page)
         {
             if (id == null)
-                return Json(false, JsonRequestBehavior.AllowGet);
+                return HttpNotFound();
             var publication = db.Publications.Where(m => m.Id == id).FirstOrDefault();
             if (publication == null)
-                return Json(false, JsonRequestBehavior.AllowGet);
+                return HttpNotFound();
             if (!User.Identity.IsAuthenticated)
-                return Json(false, JsonRequestBehavior.AllowGet);
+                return RedirectToAction("Login", "Account");
             var user = db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault();
             if (user.Id == publication.UserId || user.RoleId == 2)
             {
@@ -280,14 +295,14 @@ namespace WebApp.Controllers
                 else
                     publication.IsActive = false;
                 db.SaveChanges();
-                return Json(true, JsonRequestBehavior.AllowGet);
+                return RedirectToAction("MyPublications", "Home", new { page });
             }
             else
             {
-                return Json(false, JsonRequestBehavior.AllowGet);
+                return HttpNotFound();
             }
         }
-        public ActionResult EditPublication(int? id)
+        public ActionResult EditPublication(int? id, int? page)
         {
             if (id == null)
                 return HttpNotFound();
@@ -295,7 +310,7 @@ namespace WebApp.Controllers
             if (publication == null)
                 return HttpNotFound();
             if (!User.Identity.IsAuthenticated)
-                return HttpNotFound();
+                return RedirectToAction("Login", "Account");
             var user = db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault();
             if (user.Id == publication.UserId || user.RoleId == 2)
             {
@@ -306,25 +321,25 @@ namespace WebApp.Controllers
                 return HttpNotFound();
             }
         }
-        public ActionResult DeletePublication(int? id)
+        public ActionResult DeletePublication(int? id, int? page)
         {
             if (id == null)
-                return Json(false, JsonRequestBehavior.AllowGet);
+                return HttpNotFound();
             var publication = db.Publications.Where(m => m.Id == id).FirstOrDefault();
             if (publication == null)
-                return Json(false, JsonRequestBehavior.AllowGet);
+                return HttpNotFound();
             if (!User.Identity.IsAuthenticated)
-                return Json(false, JsonRequestBehavior.AllowGet);
+                return RedirectToAction("Login", "Account");
             var user = db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault();
             if (user.Id == publication.UserId || user.RoleId == 2)
             {
                 db.Publications.Remove(publication);
                 db.SaveChanges();
-                return Json(true, JsonRequestBehavior.AllowGet);
+                return RedirectToAction("MyPublications", "Home", new { page });
             }
             else
             {
-                return Json(false, JsonRequestBehavior.AllowGet);
+                return HttpNotFound();
             }
         }
         #endregion
@@ -341,7 +356,7 @@ namespace WebApp.Controllers
             else
             {
                 return View("CreatePublicationContent/CreatePublication",
-                    new CreatePublicationModel(db.Publications.Where(m=>m.Id==id).FirstOrDefault()));
+                    new CreatePublicationModel(db.Publications.Where(m => m.Id == id).FirstOrDefault()));
             }
         }
         [HttpPost]
@@ -350,33 +365,44 @@ namespace WebApp.Controllers
             Publication publication = new Publication(publicationView);
             publication.IsApprovedByAdmin = false;
             publication.IsActive = false;
-            if (db.Publications.Where(m=>m.Id==publication.Id) == null)
+            if (db.Publications.Where(m => m.Id == publication.Id).FirstOrDefault() == null)
             {
                 publication = db.Publications.Add(publication);
-                int count = 1;
-                foreach (var file in publicationView.Files)
-                {
-                    if (file != null)
-                    {
-                        try
-                        {
-                            System.IO.File.WriteAllBytes(Server.MapPath("~/Images/Publication/" + publication.Id + "/" + count + ".jpg"), ImageTransformation.Transform(file));
-                        }
-                        catch (IOException e)
-                        {
-                            Directory.CreateDirectory(Server.MapPath("~") + "/Images/Publication/" + publication.Id);
-                            System.IO.File.WriteAllBytes(Server.MapPath("~/Images/Publication/" + publication.Id + "/" + count + ".jpg"), ImageTransformation.Transform(file));
-                        }
-                        count++;
-                    }
-                }
+                db.SaveChanges();
             }
             else
             {
+                publication.IsApprovedByAdmin = false;
+                publication.IsActive = false;
                 db.Entry(publication).State = EntityState.Modified;
+                db.SaveChanges();
             }
-            db.SaveChanges();
-            return RedirectToAction("Browse");
+            int count;
+            try
+            {
+                count = Directory.EnumerateFiles(Server.MapPath("~/Images/Publication/" + publication.Id + "/")).Count() + 1;
+            }
+            catch
+            {
+                count = 1;
+            }
+            foreach (var file in publicationView.Files)
+            {
+                if (file != null)
+                {
+                    try
+                    {
+                        System.IO.File.WriteAllBytes(Server.MapPath("~/Images/Publication/" + publication.Id + "/" + count + ".jpg"), ImageTransformation.Transform(file));
+                    }
+                    catch (IOException e)
+                    {
+                        Directory.CreateDirectory(Server.MapPath("~") + "/Images/Publication/" + publication.Id);
+                        System.IO.File.WriteAllBytes(Server.MapPath("~/Images/Publication/" + publication.Id + "/" + count + ".jpg"), ImageTransformation.Transform(file));
+                    }
+                    count++;
+                }
+            }
+            return RedirectToAction("MyPublications");
         }
         public ActionResult ContentForFlat(int? id)
         {
@@ -386,7 +412,7 @@ namespace WebApp.Controllers
             if (id != null)
             {
                 var publication = db.Publications.Where(m => m.Id == id).FirstOrDefault();
-                if(publication!=null)
+                if (publication != null)
                     return PartialView("CreatePublicationContent/ContentForFlat", new CreatePublicationModel(publication));
             }
             return PartialView("CreatePublicationContent/ContentForFlat");

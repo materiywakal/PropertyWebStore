@@ -7,7 +7,7 @@ using WebApp.ViewModels;
 
 namespace WebApp.Models
 {
-    public class WebContex : DbContext
+    public class WebContext : DbContext
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
@@ -67,6 +67,7 @@ namespace WebApp.Models
         public bool IsApprovedByAdmin { get; set; } 
         public bool IsActive { get; set; }
         public int AmountOfPageViews { get; set; }
+        public bool IsSubwayNear { get; set; }
 
         public Publication()
         {
@@ -138,6 +139,7 @@ namespace WebApp.Models
             CanExchange = model.CanExchange;
             RoomAmount = model.RoomAmount;
             OfferingRoomAmount = model.OfferingRoomAmount;
+            IsSubwayNear = model.IsSubwayNear;
             PostTime = DateTime.Now;
         }
     }

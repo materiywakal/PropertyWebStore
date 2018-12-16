@@ -16,7 +16,7 @@
         @Html.HiddenFor(m => m.Coordinates);
         <div>Тип недвижимости  @Html.DropDownListFor(m => m.PropertyTypeId, ViewBag.PropertyTypes as SelectList, new { @id = "proptype" })</div> <br />
         <div id="propcontent">
-            @Html.Action("ContentForFlat", new { id = 1 })
+            @Html.Action("ContentForFlat")
         </div>
         @Html.TextBoxFor(m => m.Files, new { type = "file", multiple = "multiple", name = "Files", accept = "image/x-png,image/gif,image/jpeg" })
         <div>Описание @Html.EditorFor(m => m.Description)</div>

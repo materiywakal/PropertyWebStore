@@ -54,8 +54,8 @@ nav li{
 }
 footer{
     font-size: 7pt;
-    align-self: flex-end;
     text-align: center;
+    margin-top:50px;
 }
 
 a:link {
@@ -102,5 +102,9 @@ a:active {
 }
 
 #name{
+    color: dimgrey;
+}
+
+#adminlabel{
     color: dimgrey;
 }

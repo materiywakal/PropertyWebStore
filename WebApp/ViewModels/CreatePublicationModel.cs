@@ -48,6 +48,7 @@ namespace WebApp.ViewModels
             Coordinates = publication.Coordinates;
             IsOneDayRent = publication.IsOneDayRent;
             CanExchange = publication.CanExchange;
+            IsSubwayNear = publication.IsSubwayNear;
         }
         public List<HttpPostedFileBase> Files { get; set; }
 
@@ -68,6 +69,7 @@ namespace WebApp.ViewModels
         public float KitchenArea { get; set; }
         [Required]
         public float PropertyArea { get; set; }
+        public bool IsSubwayNear { get; set; }
 
         public int BlockOfFlatsTypeId { get; set; }
         public BlockOfFlatsType BlockOfFlatsType { get; set; }

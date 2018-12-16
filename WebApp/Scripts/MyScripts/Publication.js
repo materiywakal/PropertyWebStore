@@ -30,7 +30,7 @@
     $(".left").hover(
         function () {
             if (currentImage > 1) {
-                $(this).css("color", "red");
+                $(this).children().attr("src", "/Images/Resources/rightarrowred.png");
                 $(this).css("cursor", "pointer");
             }
             else {
@@ -38,14 +38,14 @@
             }
         },
         function () {
-            $(this).css("color", "dimgray");
+            $(this).children().attr("src", "/Images/Resources/rightarrowgrey.png");
             $(this).css("cursor", "default");
         }
     );
     $(".right").hover(
         function () {
             if (currentImage < imagesAmount) {
-                $(this).css("color", "red");
+                $(this).children().attr("src", "/Images/Resources/rightarrowred.png");
                 $(this).css("cursor", "pointer");
             }
             else {
@@ -53,11 +53,20 @@
             }
         },
         function () {
-            $(this).css("color", "dimgray");
+            $(this).children().attr("src", "/Images/Resources/rightarrowgrey.png");
             $(this).css("cursor", "default");
         }
     );
     $(".left").click(function () {
+        var bufcount = currentImage - 1;
+        if (bufcount > 1) {
+            $(this).children().attr("src", "/Images/Resources/rightarrowred.png");
+            $(this).css("cursor", "pointer");
+        }
+        else {
+            $(this).children().attr("src", "/Images/Resources/rightarrowgrey.png");
+            $(this).css("cursor", "arrow");
+        }
         $.ajax({
             url: "/Home/ReturnImagePathAndNumber",
             data: "currentImage=" + currentImage + "&publicationId=" + publicationId + "&isLeft=true",
@@ -71,6 +80,15 @@
         });
     });
     $(".right").click(function () {
+        var bufcount = currentImage + 1;
+        if (bufcount < imagesAmount) {
+            $(this).children().attr("src", "/Images/Resources/rightarrowred.png");
+            $(this).css("cursor", "pointer");
+        }
+        else {
+            $(this).children().attr("src", "/Images/Resources/rightarrowgrey.png");
+            $(this).css("cursor", "arrow");
+        }
         $.ajax({
             url: "/Home/ReturnImagePathAndNumber",
             data: "currentImage=" + currentImage + "&publicationId=" + publicationId + "&isLeft=false",

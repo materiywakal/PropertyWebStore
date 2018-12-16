@@ -1,0 +1,79 @@
+﻿@model IEnumerable<WebApp.Models.Publication>
+@{
+    ViewBag.Title = "Statistics";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="@Url.Content("~/Content/MyCSS/Statistics.css")" rel="stylesheet" type="text/css"/>
+
+<div align="center">
+    <div>Количество объявлений: @Model.Count()</div>
+    <div>Количество проданных: @Model.Where(m=>m.IsSelled).Count()</div>
+    <div>Количество объявлений на рассмотрении: @Model.Where(m=>!m.IsApprovedByAdmin).Count()</div>
+    @if (Model.Count() != 0)
+    {
+        <table>
+            <tr>
+                <td style="width:200px">Адрес</td>
+                <td style="width:80px">Количество просмотров</td>
+                <td style="width:100px">Статус</td>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Address</td>
+                    <td>@item.AmountOfPageViews</td>
+                    @if (item.IsSelled)
+                    {
+                        <td>Продано</td>
+                    }
+                    else
+                    {
+                        if (!item.IsApprovedByAdmin)
+                        {
+                            <td>На рассмотрении</td>
+                        }
+                        else
+                        {
+                            if (item.IsActive)
+                            {
+                                <td>Активно</td>
+                            }
+                            else
+                            {
+                                <td>Деактивировано</td>
+                            }
+                        }
+                    }
+                </tr>
+            }
+        </table>
+    }
+    <br />
+    <div>Количество чатов: @ViewBag.ChatsCount</div>
+    @if (ViewBag.ChatsCount != 0)
+    {
+        <table>
+            <tr>
+                <td style="width:140px;">Имя пользователя</td>
+                <td style="width:120px;">Количество сообщений</td>
+            </tr>
+            @foreach (var item in ViewBag.Chats)
+            {
+                <tr>
+                    @if (item.User1Id == ViewBag.UserId)
+                    {
+                        <td>@item.User2.Name</td>
+                    }
+                    else
+                    {
+                        <td>@item.User1.Name</td>
+                    }
+                    <td>
+                        @item.Messages.Count
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+</div>
+

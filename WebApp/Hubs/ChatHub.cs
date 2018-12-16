@@ -9,7 +9,7 @@ namespace SignalRMvc.Hubs
 {
     public class ChatHub : Hub
     {
-        WebContex db = new WebContex();
+        WebContext db = new WebContext();
 
         public void Send(string User1Id, string User2Id, string message)
         {

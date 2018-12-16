@@ -6,14 +6,14 @@ namespace WebApp.Migrations
     using System.Linq;
     using WebApp.Models;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<WebContex>
+    internal sealed class Configuration : DbMigrationsConfiguration<WebContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(WebContex db)
+        protected override void Seed(WebContext db)
         {
             db.PropertyTypes.AddOrUpdate(new PropertyType { Id = 1, Content = "квартира" });
             db.PropertyTypes.AddOrUpdate(new PropertyType { Id = 2, Content = "комната" });
