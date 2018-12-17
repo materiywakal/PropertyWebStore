@@ -1,0 +1,90 @@
+﻿@model IEnumerable<WebApp.Models.Publication>
+@{
+    ViewBag.Title = "Statistics";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="@Url.Content("~/Content/MyCSS/Statistics.css")" rel="stylesheet" type="text/css"/>
+
+<div align="center">
+    <div>Количество объявлений: @Model.Count()</div>
+    <div>Количество активных: @Model.Where(m => m.IsActive && m.IsApprovedByAdmin).Count()</div>
+    <div>Количество на проверке: @Model.Where(m => !m.IsApprovedByAdmin).Count()</div>
+    <div>Количество проданных: @Model.Where(m => m.IsSelled).Count()</div>
+    <div>Количество не проданных, удаленных объявлений: @Model.Where(m => !m.IsSelled && m.IsDeleted).Count()</div>
+    @if (Model.Count() != 0)
+    {
+        <table>
+            <tr>
+                <td style="width:200px">Адрес</td>
+                <td style="width:80px">Количество просмотров</td>
+                <td style="width:100px">Статус</td>
+                <td style="width:80px">Id пользователя</td>
+                <td style="width:100px">Имя пользователя</td>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Address</td>
+                    <td>@item.AmountOfPageViews</td>
+                    @if (item.IsDeleted)
+                    {
+                        if (item.IsSelled)
+                        {
+                            <td>Продано</td>
+                        }
+                        else
+                        {
+                            <td>Удалено</td>
+                        }
+                    }
+                    else
+                    {
+                        if (!item.IsApprovedByAdmin)
+                        {
+                            <td>На рассмотрении</td>
+                        }
+                        else
+                        {
+                            if (item.IsActive)
+                            {
+                                <td>Активно</td>
+                            }
+                            else
+                            {
+                                <td>Деактивировано</td>
+                            }
+                        }
+                    }
+                    <td>@item.UserId</td>
+                    <td>@item.User.Name</td>
+                </tr>
+            }
+        </table>
+    }
+    <br />
+    <div>Количество зарегестрированных пользователей: @ViewBag.UsersCount</div>
+    @if (ViewBag.UsersCount != 0)
+    {
+        <table>
+            <tr>
+                <td style="width:150px">Имя</td>
+                <td style="width:250px">Почта</td>
+                <td style="width:170px">Телефон</td>
+            </tr>
+            @foreach (var user in ViewBag.Users)
+            {
+                <tr>
+                    <td>@user.Name</td>
+                    <td>@user.Email</td>
+                    <td>@user.Phone</td>
+                </tr>
+            }
+        </table>
+    }
+    <br />
+    @using (Html.BeginForm())
+    {
+        <input type="submit" value="Скачать в pdf" />
+    }
+</div>
+

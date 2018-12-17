@@ -9,6 +9,8 @@ using System.Web.Configuration;
 using System.Web.Helpers;
 using System.Net.Mail;
 using System.Data.Entity;
+using SelectPdf;
+using WebApp.Util;
 
 namespace WebApp.Controllers
 {
@@ -142,6 +144,43 @@ namespace WebApp.Controllers
                 }
             }
             return HttpNotFound();
+        }
+        [HttpPost]
+        public ActionResult Statistics(int? i)
+        {
+            HtmlToPdf converter = new HtmlToPdf();
+            PdfDocument doc;
+            try
+            {
+                doc = converter.ConvertHtmlString(ClearStatisticsAsString());
+            }
+            catch
+            {
+                return HttpNotFound();
+            }
+            byte[] pdf = doc.Save();
+            doc.Close();
+
+            FileResult fileResult = new FileContentResult(pdf, "application/pdf");
+            fileResult.FileDownloadName = "Statistics.pdf";
+            return fileResult;
+        }
+        private string ClearStatisticsAsString()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                var user = db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault();
+                if (user != null)
+                {
+                    var publications = db.Publications.Include(m => m.User).Where(m => m.User.Email == User.Identity.Name);
+                    var chats = db.Chats.Include(m => m.User1).Include(m => m.User2).Where(m => m.User1Id == user.Id || m.User2Id == user.Id);
+                    ViewBag.Chats = chats.Include(m => m.Messages);
+                    ViewBag.ChatsCount = chats.Count();
+                    ViewBag.UserId = user.Id;
+                    return ViewToString.RenderViewToString(this.ControllerContext, "~/Views/Account/ClearStatistics.cshtml", publications);
+                }
+            }
+            return null;
         }
         public ActionResult IsAuthenticated()
         {

@@ -10,14 +10,14 @@
 
 @using (Html.BeginForm())
 {
-<div class="publcontent">
-    @Html.Label("Тип публикации")
-    @Html.DropDownList("propertyType", ViewBag.PropertyTypes as SelectList, new { @id = "filterType" })
+    <div class="publcontent">
+        @Html.Label("Тип публикации")
+        @Html.DropDownList("propertyType", ViewBag.PropertyTypes as SelectList, new { @id = "filterType" })
 
-    <div id="outerFilter"></div>
-    @Html.Action("BrowseFilterCost")
-    <input type="submit" value="Поиск" />
-</div>
+        <div id="outerFilter"></div>
+        @Html.Action("BrowseFilterCost")
+        <input type="submit" value="Поиск" />
+    </div>
 }
 
 @foreach (var item in Model)

@@ -11,34 +11,34 @@
 
 @foreach (var item in Model)
 {
-    <div align="center">
-        @if (item.IsApprovedByAdmin)
-        {
-            <span style="color:lawngreen; text-align:left; font-size: 7pt;">Одобрено. </span>
-        }
-        else
-        {
-            <span style="color:red; text-align:left; font-size: 7pt;">Проверяется. </span>
-        }
-        @if (item.IsActive)
-        {
-            <span style="color:lawngreen; text-align:left; font-size: 7pt;">Активировано. </span>
-        }
-        else
-        {
-            <span style="color:red; text-align:left; font-size: 7pt;">Деактивировано. </span>
-        }
-        <a href="/Home/Publication?id=@item.Id.ToString()">
-            <div class="publgrid publcontent">
-                <div class="publimage"><img src="~/Images/Publication/@item.Id/1.jpg" width="150" height="150" /></div>
-                <div class="publaddress">@Html.DisplayFor(m => item.Address)</div>
-                <div class="publdata">@Html.DisplayFor(m => item.PostTime)</div>
-            </div>
-        </a>
-        <a class="commrefs" href="/Home/ActivePublication?id=@item.Id&page=@Model.PageNumber">Активация</a>
-        <a class="commrefs" href="/Home/EditPublication?id=@item.Id&page=@Model.PageNumber">Редактировать</a>
-        <a class="commrefs" href="/Home/DeletePublication?id=@item.Id&page=@Model.PageNumber">Удалить</a>
-    </div>
+<div align="center">
+    @if (item.IsApprovedByAdmin)
+    {
+        <span style="color:lawngreen; text-align:left; font-size: 7pt;">Одобрено. </span>
+    }
+    else
+    {
+        <span style="color:red; text-align:left; font-size: 7pt;">Проверяется. </span>
+    }
+    @if (item.IsActive)
+    {
+        <span style="color:lawngreen; text-align:left; font-size: 7pt;">Активировано. </span>
+    }
+    else
+    {
+        <span style="color:red; text-align:left; font-size: 7pt;">Деактивировано. </span>
+    }
+    <a href="/Home/Publication?id=@item.Id.ToString()">
+        <div class="publgrid publcontent">
+            <div class="publimage"><img src="~/Images/Publication/@item.Id/1.jpg" width="150" height="150" /></div>
+            <div class="publaddress">@Html.DisplayFor(m => item.Address)</div>
+            <div class="publdata">@Html.DisplayFor(m => item.PostTime)</div>
+        </div>
+    </a>
+    <a class="commrefs" href="/Home/ActivePublication?id=@item.Id&page=@Model.PageNumber">Активация</a>
+    <a class="commrefs" href="/Home/EditPublication?id=@item.Id&page=@Model.PageNumber">Редактировать</a>
+    <a class="commrefs" href="" onclick="Delete(@item.Id,@Model.PageNumber, this);">Удалить</a>@*/Home/DeletePublication?id=@item.Id&page=@Model.PageNumber*@
+</div>
 }
 <div align="center">
     @Html.PagedListPager(Model, page => Url.Action("Browse", new { page }))

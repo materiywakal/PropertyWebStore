@@ -6,7 +6,7 @@
         dataType: 'json',
         success: function (data) {
             if (data) {
-                $("#labels").append('<li><span id="adminlabel">Администрирование</span><ul class="submenu"><li><a href="/Admin/UnconfirmedPublications">Проверка объявлений</a></li></ul></li>');
+                $("#labels").append('<li><span id="adminlabel">Администрирование</span><ul class="submenu"><li><a href="/Admin/UnconfirmedPublications">Проверка объявлений</a></li><li><a href="/Admin/Statistics">Статистика</a></li></ul></li>');
             }
         }
     });

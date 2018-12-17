@@ -11,6 +11,7 @@ using System.Data.Entity;
 using PagedList.Mvc;
 using PagedList;
 using WebApp.Util;
+using SelectPdf;
 
 namespace WebApp.Controllers
 {
@@ -30,7 +31,7 @@ namespace WebApp.Controllers
                         .Include(p => p.BathroomType)
                         .Include(p => p.BalconyType)
                         .Include(p => p.WallMaterial);
-                    publications = publications.Where(m => !m.IsApprovedByAdmin);
+                    publications = publications.Where(m => !m.IsApprovedByAdmin && !m.IsDeleted);
                     int pageNumber = page ?? 1;
 
                     ViewBag.PropertyTypes = new SelectList(db.PropertyTypes.ToList(), "Id", "Content");
@@ -68,6 +69,52 @@ namespace WebApp.Controllers
                 }
             }
             return HttpNotFound();
+        }
+        public ActionResult Statistics()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                var user = db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault();
+                if (user != null)
+                {
+                    if (user.RoleId == 2)
+                    {
+                        var publications = db.Publications.Include(m => m.User);
+                        ViewBag.Users = db.Users;
+                        ViewBag.UsersCount = db.Users.Count();
+                        return View(publications);
+                    }
+                }
+            }
+            return HttpNotFound();
+        }
+        [HttpPost]
+        public ActionResult Statistics(int? i)
+        {
+            HtmlToPdf converter = new HtmlToPdf();
+            PdfDocument doc;
+            try
+            {
+                doc = converter.ConvertHtmlString(ClearStatisticsAsString());
+            }
+            catch
+            {
+                return HttpNotFound();
+            }
+            byte[] pdf = doc.Save();
+            doc.Close();
+
+            FileResult fileResult = new FileContentResult(pdf, "application/pdf");
+            fileResult.FileDownloadName = "Statistics.pdf";
+            return fileResult;
+        }
+        private string ClearStatisticsAsString()
+        {
+            var user = db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault();
+            var publications = db.Publications.Include(m => m.User);
+            ViewBag.Users = db.Users;
+            ViewBag.UsersCount = db.Users.Count();
+            return ViewToString.RenderViewToString(this.ControllerContext, "~/Views/Admin/ClearStatistics.cshtml", publications);
         }
     }
 }

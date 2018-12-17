@@ -11,6 +11,8 @@ using System.Data.Entity;
 using PagedList.Mvc;
 using PagedList;
 using WebApp.Util;
+using System.Threading.Tasks;
+
 
 namespace WebApp.Controllers
 {
@@ -43,7 +45,7 @@ namespace WebApp.Controllers
                 .Include(p => p.BathroomType)
                 .Include(p => p.BalconyType)
                 .Include(p => p.WallMaterial);
-            publications = publications.Where(m => m.IsApprovedByAdmin && m.IsActive);
+            publications = publications.Where(m => m.IsApprovedByAdmin && m.IsActive && !m.IsDeleted);
             int pageNumber = page ?? 1;
 
             ViewBag.PropertyTypes = new SelectList(db.PropertyTypes.ToList(), "Id", "Content");
@@ -167,9 +169,15 @@ namespace WebApp.Controllers
             if (publication == null)
                 return HttpNotFound();
             if (User.Identity.IsAuthenticated)
-                if (db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault() != null)
-                    return View("PublicationContent/Publication", publication);
-            if (!publication.IsApprovedByAdmin || !publication.IsActive)
+            {
+                var user = db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault();
+                if (user != null)
+                {
+                    if (publication.UserId == user.Id || user.RoleId == 2)
+                        return View("PublicationContent/Publication", publication);
+                }
+            }
+            if (!publication.IsApprovedByAdmin || !publication.IsActive || publication.IsDeleted)
                 return HttpNotFound();
             return View("PublicationContent/Publication", publication);
         }
@@ -266,12 +274,12 @@ namespace WebApp.Controllers
                     .Include(p => p.BathroomType)
                     .Include(p => p.BalconyType)
                     .Include(p => p.WallMaterial);
-                publications = publications.Where(m => m.User.Email == User.Identity.Name);
+                publications = publications.Where(m => m.User.Email == User.Identity.Name && !m.IsDeleted);
                 int pageNumber = page ?? 1;
 
                 ViewBag.PropertyTypes = new SelectList(db.PropertyTypes.ToList(), "Id", "Content");
 
-                return View(publications.OrderByDescending(x => x.Id).ToList().ToPagedList(pageNumber, pageSize));
+                return View("MyPublications/MyPublications", publications.OrderByDescending(x => x.Id).ToList().ToPagedList(pageNumber, pageSize));
             }
             else
             {
@@ -321,7 +329,7 @@ namespace WebApp.Controllers
                 return HttpNotFound();
             }
         }
-        public ActionResult DeletePublication(int? id, int? page)
+        public ActionResult DeletePublication(int? id, bool? isSelled, int? page)
         {
             if (id == null)
                 return HttpNotFound();
@@ -333,7 +341,11 @@ namespace WebApp.Controllers
             var user = db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault();
             if (user.Id == publication.UserId || user.RoleId == 2)
             {
-                db.Publications.Remove(publication);
+                publication.IsDeleted = true;
+                publication.IsActive = false;
+                publication.IsSelled = isSelled ?? false;
+
+                Task.Run(() => Directory.Delete(Server.MapPath("~/Images/Publication/" + publication.Id + "/"), true));
                 db.SaveChanges();
                 return RedirectToAction("MyPublications", "Home", new { page });
             }
@@ -363,8 +375,6 @@ namespace WebApp.Controllers
         public ActionResult CreatePublication(CreatePublicationModel publicationView)
         {
             Publication publication = new Publication(publicationView);
-            publication.IsApprovedByAdmin = false;
-            publication.IsActive = false;
             if (db.Publications.Where(m => m.Id == publication.Id).FirstOrDefault() == null)
             {
                 publication = db.Publications.Add(publication);

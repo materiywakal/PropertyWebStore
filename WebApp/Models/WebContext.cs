@@ -68,6 +68,7 @@ namespace WebApp.Models
         public bool IsActive { get; set; }
         public int AmountOfPageViews { get; set; }
         public bool IsSubwayNear { get; set; }
+        public bool IsDeleted { get; set; }
 
         public Publication()
         {
