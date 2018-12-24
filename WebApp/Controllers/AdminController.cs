@@ -17,7 +17,7 @@ namespace WebApp.Controllers
 {
     public class AdminController : Controller
     {
-        Models.WebContext db = new Models.WebContext();
+        WebAppContext db = new WebAppContext();
         const int pageSize = 8;
         public ActionResult UnconfirmedPublications(int? page)
         {

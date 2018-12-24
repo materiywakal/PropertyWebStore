@@ -1,0 +1,73 @@
+﻿input[type="text"] {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: #ffffff !important;
+    outline: none;
+    height: 22px;
+    width: 120px;
+    color: black;
+    font-size: 10pt;
+    font-family: Tahoma;
+}
+input[type="password"] {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: #ffffff !important;
+    outline: none;
+    height: 22px;
+    width: 120px;
+    color: black;
+    font-size: 10pt;
+    font-family: Tahoma;
+}
+input[type="number"] {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: #ffffff !important;
+    outline: none;
+    height: 22px;
+    width: 120px;
+    color: black;
+    font-size: 10pt;
+    font-family: Tahoma;
+}
+select {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: #ffffff !important;
+    outline: none;
+    height: 30px;
+    width: 120px;
+    color: black;
+    font-size: 10pt;
+    font-family: Tahoma;
+}
+input::selection{
+    background-color:red;
+}
+option {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: #ffffff !important;
+    outline: none;
+    height: 30px;
+    width: 120px;
+    color: black;
+    font-size: 10pt;
+    font-family: Tahoma;
+}
+input[type="submit"] {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: #ffffff !important;
+    outline: none;
+    height: 22px;
+    width: 120px;
+    color: black;
+    font-size: 11px;
+    font-family: Tahoma;
+}
+input[type="submit"]:hover {
+    border: 1px solid red;
+    color: red;
+}

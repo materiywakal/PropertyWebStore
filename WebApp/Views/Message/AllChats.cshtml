@@ -10,19 +10,11 @@
 {
     if (item.User1.Email == User.Identity.Name)
     {
-        <a href="/Message/Chat?id=@item.User2Id.ToString()">
-            <div class="publcontent">
-                @Html.Label(item.User2.Name)
-            </div>
-        </a>
+        <a class="publcontent" href="/Message/Chat?id=@item.User2Id.ToString()" style="display:block;">@item.User2.Name</a>
     }
     else
     {
-        <a href="/Message/Chat?id=@item.User1Id.ToString()">
-            <div class="publcontent">
-                @Html.Label(item.User1.Name)
-            </div>
-        </a>
+        <a class="publcontent" href="/Message/Chat?id=@item.User1Id.ToString()" style="display:block;">@item.User1.Name</a>
     }
 
 }

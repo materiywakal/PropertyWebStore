@@ -14,9 +14,9 @@
         @Html.Label("Тип публикации")
         @Html.DropDownList("propertyType", ViewBag.PropertyTypes as SelectList, new { @id = "filterType" })
 
-        <div id="outerFilter"></div>
+        <div id="outerFilter" style="margin-top:5px;"></div>
         @Html.Action("BrowseFilterCost")
-        <input type="submit" value="Поиск" />
+        <input type="submit" value="Поиск" style="margin-top:5px;" />
     </div>
 }
 

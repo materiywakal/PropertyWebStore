@@ -53,21 +53,28 @@ namespace WebApp.ViewModels
         public List<HttpPostedFileBase> Files { get; set; }
 
         public bool IsRent { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Введите этаж.")]
+        [Range(0, 100, ErrorMessage = "Недопустимое количество этажей")]
         public int Floor { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Введите количество комнат.")]
+        [Range(0, 30, ErrorMessage = "Недопустимое количество комнат")]
         public int RoomAmount { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Введите количество предлагаемых комнат.")]
+        [Range(0, 30, ErrorMessage = "Недопустимое количество комнат")]
         public int OfferingRoomAmount { get; set; }
         public bool IsPassageRoom { get; set; }
         public bool IsFurnitureExist { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Введите площадь.")]
+        [Range(0, 1000, ErrorMessage = "Недопустимая площадь")]
         public float TotalArea { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Введите площадь.")]
+        [Range(0, 1000, ErrorMessage = "Недопустимая площадь")]
         public float LivingArea { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Введите площадь.")]
+        [Range(0, 1000, ErrorMessage = "Недопустимая площадь")]
         public float KitchenArea { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Введите площадь.")]
+        [Range(0, 5000, ErrorMessage = "Недопустимая площадь")]
         public float PropertyArea { get; set; }
         public bool IsSubwayNear { get; set; }
 
@@ -85,12 +92,12 @@ namespace WebApp.ViewModels
         public int WallMaterialId { get; set; }
         public WallMaterial WallMaterial { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Опишите вашу недвижимость.")]
         public string Description { get; set; }
         public DateTime PostTime { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Введите цену.")]
         public float Cost { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Выберите на карте вашу недвижимость.")]
         public string Address { get; set; }
         public string Coordinates { get; set; }
         public bool IsOneDayRent { get; set; }

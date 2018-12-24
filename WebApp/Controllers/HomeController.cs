@@ -18,7 +18,7 @@ namespace WebApp.Controllers
 {
     public class HomeController : Controller
     {
-        Models.WebContext db = new Models.WebContext();
+        WebAppContext db = new WebAppContext();
         const int pageSize = 8;
 
         #region Index
@@ -46,6 +46,7 @@ namespace WebApp.Controllers
                 .Include(p => p.BalconyType)
                 .Include(p => p.WallMaterial);
             publications = publications.Where(m => m.IsApprovedByAdmin && m.IsActive && !m.IsDeleted);
+
             int pageNumber = page ?? 1;
 
             ViewBag.PropertyTypes = new SelectList(db.PropertyTypes.ToList(), "Id", "Content");
@@ -62,7 +63,7 @@ namespace WebApp.Controllers
                 .Include(p => p.BathroomType)
                 .Include(p => p.BalconyType)
                 .Include(p => p.WallMaterial);
-            publications = publications.Where(m => m.IsApprovedByAdmin && m.IsActive);
+            publications = publications.Where(m => m.IsApprovedByAdmin && m.IsActive && !m.IsDeleted);
 
             publications = ApplyFilters(model, publications);
 
@@ -76,6 +77,7 @@ namespace WebApp.Controllers
         private IQueryable<Publication> ApplyFilters(BrowseFilterModel model, IQueryable<Publication> publications)
         {
             publications = publications.Where(m => m.PropertyTypeId == model.PropertyType);
+            publications = ApplyFilterForCost(model, publications);
             switch (model.PropertyType)
             {
                 case 1: return ApplyFilterForFlat(model, publications);
@@ -83,7 +85,7 @@ namespace WebApp.Controllers
                 case 3: return ApplyFilterForHouse(model, publications);
                 case 4: return ApplyFilterForProperty(model, publications);
                 default: return publications;
-            }
+            }           
         }
         private IQueryable<Publication> ApplyFilterForFlat(BrowseFilterModel model, IQueryable<Publication> publications)
         {
@@ -130,6 +132,15 @@ namespace WebApp.Controllers
             {
                 publications = publications.Where(m => m.RoomAmount >= (model.MinPropertyArea ?? 0));
                 publications = publications.Where(m => m.RoomAmount <= (model.MaxPropertyArea ?? Single.MaxValue));
+            }
+            return publications;
+        }
+        private IQueryable<Publication> ApplyFilterForCost(BrowseFilterModel model, IQueryable<Publication> publications)
+        {
+            if (model.MinCost != null || model.MaxCost != null)
+            {
+                publications = publications.Where(m => m.Cost >= (model.MinCost ?? 0));
+                publications = publications.Where(m => m.Cost <= (model.MaxCost ?? Int32.MaxValue));
             }
             return publications;
         }
@@ -252,7 +263,7 @@ namespace WebApp.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                if (db.Users.Where(m => m.Email == User.Identity.Name).FirstOrDefault() != null)
+                if (db.Publications.Where(m => m.User.Email == User.Identity.Name).FirstOrDefault() != null)
                 {
                     return Json(false, JsonRequestBehavior.AllowGet);
                 }
@@ -275,6 +286,7 @@ namespace WebApp.Controllers
                     .Include(p => p.BalconyType)
                     .Include(p => p.WallMaterial);
                 publications = publications.Where(m => m.User.Email == User.Identity.Name && !m.IsDeleted);
+
                 int pageNumber = page ?? 1;
 
                 ViewBag.PropertyTypes = new SelectList(db.PropertyTypes.ToList(), "Id", "Content");
@@ -374,14 +386,18 @@ namespace WebApp.Controllers
         [HttpPost]
         public ActionResult CreatePublication(CreatePublicationModel publicationView)
         {
-            Publication publication = new Publication(publicationView);
-            if (db.Publications.Where(m => m.Id == publication.Id).FirstOrDefault() == null)
+            Publication publication = new Publication();
+            publication.ToCreatePublicationModel(publicationView);
+            if (db.Publications.Where(m => m.Id == publicationView.Id).FirstOrDefault() == null)
             {
                 publication = db.Publications.Add(publication);
                 db.SaveChanges();
             }
             else
             {
+                publication = db.Publications.Where(m => m.Id == publicationView.Id).FirstOrDefault();
+                publication.ToCreatePublicationModel(publicationView);
+
                 publication.IsApprovedByAdmin = false;
                 publication.IsActive = false;
                 db.Entry(publication).State = EntityState.Modified;

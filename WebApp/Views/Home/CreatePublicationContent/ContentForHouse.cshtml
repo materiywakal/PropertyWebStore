@@ -1,12 +1,17 @@
 ﻿@model  WebApp.ViewModels.CreatePublicationModel
 
-<div>Продажа @Html.RadioButtonFor(m => m.IsRent, false, new { @checked = "checked" }) Сдача @Html.RadioButtonFor(m => m.IsRent, true)</div>
-<div>Количество комнат @Html.EditorFor(m => m.RoomAmount)</div>
-<div>Общая площадь @Html.EditorFor(m => m.TotalArea)</div>
-<div>Жилая площадь @Html.EditorFor(m => m.LivingArea)</div>
-<div>Площадь кухни @Html.EditorFor(m => m.KitchenArea)</div>
-<div>Площадь участка @Html.EditorFor(m => m.PropertyArea)</div>
-<div>Год постройки @Html.EditorFor(m => m.YearOfConstruction)</div>
-<div>Тип дома @Html.DropDownListFor(m => m.WallMaterialId, ViewBag.WallMaterials as SelectList)</div>
-<div>Возможность обмена @Html.CheckBoxFor(m => m.CanExchange)</div>
-<div>Рядом метро @Html.CheckBoxFor(m => m.IsSubwayNear)</div>
+<div style="margin-top:5px;">Продажа @Html.RadioButtonFor(m => m.IsRent, false, new { @checked = "checked" }) Сдача @Html.RadioButtonFor(m => m.IsRent, true)</div>
+<div style="margin-top:5px;">Количество комнат @Html.EditorFor(m => m.RoomAmount)</div>
+<div>@Html.ValidationMessageFor(m => m.RoomAmount)</div>
+<div style="margin-top:5px;">Общая площадь @Html.EditorFor(m => m.TotalArea)</div>
+<div>@Html.ValidationMessageFor(m => m.TotalArea)</div>
+<div style="margin-top:5px;">Жилая площадь @Html.EditorFor(m => m.LivingArea)</div>
+<div>@Html.ValidationMessageFor(m => m.LivingArea)</div>
+<div style="margin-top:5px;">Площадь кухни @Html.EditorFor(m => m.KitchenArea)</div>
+<div>@Html.ValidationMessageFor(m => m.KitchenArea)</div>
+<div style="margin-top:5px;">Площадь участка @Html.EditorFor(m => m.PropertyArea)</div>
+<div>@Html.ValidationMessageFor(m => m.PropertyArea)</div>
+<div style="margin-top:5px;">Год постройки @Html.EditorFor(m => m.YearOfConstruction)</div>
+<div style="margin-top:5px;">Тип дома @Html.DropDownListFor(m => m.WallMaterialId, ViewBag.WallMaterials as SelectList)</div>
+<div style="margin-top:5px;">Возможность обмена @Html.CheckBoxFor(m => m.CanExchange)</div>
+<div style="margin-top:5px;">Рядом метро @Html.CheckBoxFor(m => m.IsSubwayNear)</div>

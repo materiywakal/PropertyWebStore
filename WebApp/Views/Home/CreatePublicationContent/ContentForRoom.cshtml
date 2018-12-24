@@ -1,9 +1,12 @@
 ﻿@model  WebApp.ViewModels.CreatePublicationModel
 
-<div>Этаж @Html.EditorFor(m => m.Floor) </div>
-<div>Количество комнат @Html.EditorFor(m => m.RoomAmount)</div>
-<div>Количество предлагаемых комнат @Html.EditorFor(m => m.OfferingRoomAmount)</div>
-<div>Проходная @Html.RadioButtonFor(m => m.IsPassageRoom, true) С отдельным входом @Html.RadioButtonFor(m => m.IsPassageRoom, false, new { @checked = "checked" }) </div>
-<div>Наличие мебели @Html.CheckBoxFor(m => m.IsFurnitureExist)</div>
-<div>Сдача посуточно @Html.RadioButtonFor(m => m.IsOneDayRent, true) на длительный срок @Html.RadioButtonFor(m => m.IsOneDayRent, false, new { @checked = "checked" }) </div>
-<div>Рядом метро @Html.CheckBoxFor(m=>m.IsSubwayNear)</div>
+<div style="margin-top:5px;">Этаж @Html.EditorFor(m => m.Floor) </div>
+<div>@Html.ValidationMessageFor(m => m.Floor)</div>
+<div style="margin-top:5px;">Количество комнат @Html.EditorFor(m => m.RoomAmount)</div>
+<div>@Html.ValidationMessageFor(m => m.RoomAmount)</div>
+<div style="margin-top:5px;">Количество предлагаемых комнат @Html.EditorFor(m => m.OfferingRoomAmount)</div>
+<div>@Html.ValidationMessageFor(m => m.OfferingRoomAmount)</div>
+<div style="margin-top:5px;">Проходная @Html.RadioButtonFor(m => m.IsPassageRoom, true) С отдельным входом @Html.RadioButtonFor(m => m.IsPassageRoom, false, new { @checked = "checked" }) </div>
+<div style="margin-top:5px;">Наличие мебели @Html.CheckBoxFor(m => m.IsFurnitureExist)</div>
+<div style="margin-top:5px;">Сдача посуточно @Html.RadioButtonFor(m => m.IsOneDayRent, true) на длительный срок @Html.RadioButtonFor(m => m.IsOneDayRent, false, new { @checked = "checked" }) </div>
+<div style="margin-top:5px;">Рядом метро @Html.CheckBoxFor(m=>m.IsSubwayNear)</div>

@@ -8,30 +8,32 @@
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
+        <div align="center">
         <div>
             @Html.Label("Имя")
-            @Html.EditorFor(m => m.Name)
-            @Html.ValidationMessageFor(m => m.Name)
+            @Html.EditorFor(m => m.Name, new { htmlAttributes = new { style = "width: 150px; margin-left:39px;" } })
+            <div>@Html.ValidationMessageFor(m => m.Name)</div>
         </div>
-        <div>
+        <div style="margin-top:5px;">
             @Html.Label("E-mail")
-            @Html.EditorFor(m => m.Email)
-            @Html.ValidationMessageFor(m => m.Email)
+            @Html.EditorFor(m => m.Email, new { htmlAttributes = new { style = "width: 150px; margin-left:20px;" } })
+            <div>@Html.ValidationMessageFor(m => m.Email)</div>
         </div>
-        <div>
+        <div style="margin-top:5px;">
             @Html.Label("Пароль")
-            @Html.EditorFor(m => m.Password)
-            @Html.ValidationMessageFor(m => m.Password)
+            @Html.EditorFor(m => m.Password, new { htmlAttributes = new { style = "width: 150px; margin-left:11px;" } })
+            <div>@Html.ValidationMessageFor(m => m.Password)</div>
         </div>
-        <div>
-            @Html.Label("Подтверждение пароля")
-            @Html.EditorFor(m => m.ConfirmPassword)
-            @Html.ValidationMessageFor(m => m.ConfirmPassword)
+        <div style="margin-top:5px;">
+            @Html.Label("Еще раз")
+            @Html.EditorFor(m => m.ConfirmPassword, new { htmlAttributes = new { style = "width: 150px; margin-left:3px;" } })
+            <div>@Html.ValidationMessageFor(m => m.ConfirmPassword)</div>
         </div>
-        <div>
+        <div style="margin-top:5px;">
             <input type="submit" value="Зарегистрировать" />
         </div>
-        <div>
+        </div>
+        <div style="margin-top:5px;">
             @Html.ValidationSummary(true)
         </div>
     }

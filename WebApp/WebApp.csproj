@@ -16,7 +16,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WebApp</RootNamespace>
     <AssemblyName>WebApp</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -258,25 +258,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Hubs\ChatHub.cs" />
-    <Compile Include="Migrations\201812081630257_initial.cs" />
-    <Compile Include="Migrations\201812081630257_initial.Designer.cs">
-      <DependentUpon>201812081630257_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812120622058_topkek.cs" />
-    <Compile Include="Migrations\201812120622058_topkek.Designer.cs">
-      <DependentUpon>201812120622058_topkek.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812131827136_isActive.cs" />
-    <Compile Include="Migrations\201812131827136_isActive.Designer.cs">
-      <DependentUpon>201812131827136_isActive.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812160811028_probablyFinal.cs" />
-    <Compile Include="Migrations\201812160811028_probablyFinal.Designer.cs">
-      <DependentUpon>201812160811028_probablyFinal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812170632395_deleted.cs" />
-    <Compile Include="Migrations\201812170632395_deleted.Designer.cs">
-      <DependentUpon>201812170632395_deleted.cs</DependentUpon>
+    <Compile Include="Migrations\201812182101030_initial.cs" />
+    <Compile Include="Migrations\201812182101030_initial.Designer.cs">
+      <DependentUpon>201812182101030_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\WebContext.cs" />
@@ -295,12 +279,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\MyCSS\Browse.css" />
     <Content Include="Content\MyCSS\Chat.css" />
+    <Content Include="Content\MyCSS\Inputs.css" />
     <Content Include="Content\MyCSS\MyPublications.css" />
     <Content Include="Content\MyCSS\Publication.css" />
     <Content Include="Content\MyCSS\Statistics.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
-    <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\MyCSS\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
@@ -378,10 +362,6 @@
     <Folder Include="Images\Publication\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
@@ -397,20 +377,8 @@
     <Content Include="Scripts\MyScripts\CreatePublication.js" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201812081630257_initial.resx">
-      <DependentUpon>201812081630257_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812120622058_topkek.resx">
-      <DependentUpon>201812120622058_topkek.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812131827136_isActive.resx">
-      <DependentUpon>201812131827136_isActive.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812160811028_probablyFinal.resx">
-      <DependentUpon>201812160811028_probablyFinal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812170632395_deleted.resx">
-      <DependentUpon>201812170632395_deleted.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812182101030_initial.resx">
+      <DependentUpon>201812182101030_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

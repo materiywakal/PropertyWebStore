@@ -8,24 +8,26 @@
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
-        <div>
-            @Html.Label("E-mail")
-            @Html.EditorFor(m => m.Email)
-            @Html.ValidationMessageFor(m => m.Email)
+        <div align="center">
+            <div>
+                @Html.Label("E-mail")
+                @Html.EditorFor(m => m.Email, new { htmlAttributes = new { style = "width: 150px; margin-left:20px;" } })
+                <div>@Html.ValidationMessageFor(m => m.Email)</div>
+            </div>
+            <div style="margin-top:5px;">
+                @Html.Label("Пароль")
+                @Html.EditorFor(m => m.Password, new { htmlAttributes = new { style = "width: 150px; margin-left:11px;" } })
+                <div>@Html.ValidationMessageFor(m => m.Password)</div>
+            </div>
         </div>
-        <div>
-            @Html.Label("Пароль")
-            @Html.EditorFor(m => m.Password)
-            @Html.ValidationMessageFor(m => m.Password)
-        </div>
-        <div>
+        <div style="margin-top:5px; margin-bottom: 5px;" align="center">
             <input type="submit" value="Войти" />
         </div>
         <div>
-            Впервые на сайте? <a href="/Account/Register">Зарегистрируйтесь!</a>
-        </div>
-        <div>
             @Html.ValidationSummary(true)
+        </div>
+        <div style="font-size:10pt;">
+            Впервые на сайте? <a href="/Account/Register">Зарегистрируйтесь!</a>
         </div>
     }
 </div>

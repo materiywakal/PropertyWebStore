@@ -1,6 +1,6 @@
 ﻿@model WebApp.Models.Publication
 @{
-    ViewBag.Title = Model.Id.ToString();
+    ViewBag.Title = Model.Address.ToString();
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <script defer src="~/Scripts/MyScripts/Publication.js"></script>
@@ -20,15 +20,11 @@
         <div class="publdesk">@Html.DisplayFor(m => m.Description)</div>
     </div>
     <div>
-        <div class="userinfo publcontent" style="height: 300px;">
-            <div>@Html.DisplayFor(m => m.User.Name)</div>
-            <div>@Html.DisplayFor(m => m.User.Phone)</div>
+        <div class="userinfo publcontent" style="height: 150px;">
+            <div align="center">@Html.DisplayFor(m => m.User.Name)</div>
+            <div align="center" style="margin-top:5px;">@Html.DisplayFor(m => m.User.Phone)</div>
         </div>
-        <a href="/Message/Chat?id=@Model.UserId">
-            <div class="publcontent" style="height: 50px;">
-                Написать
-            </div>
-        </a>
+        <a class="publcontent" href="/Message/Chat?id=@Model.UserId" style="height: 25px; display:block; margin-top:10px; text-align:center;">Написать</a>
         <div id="viewsAmount" style="height:14px; position:relative;"><img src="~/Images/Resources/eye.png"/><span>@Model.AmountOfPageViews</span></div>
     </div>
 </div>

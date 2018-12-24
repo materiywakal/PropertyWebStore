@@ -7,7 +7,7 @@ using WebApp.ViewModels;
 
 namespace WebApp.Models
 {
-    public class WebContext : DbContext
+    public class WebAppContext : DbContext
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
@@ -70,13 +70,8 @@ namespace WebApp.Models
         public bool IsSubwayNear { get; set; }
         public bool IsDeleted { get; set; }
 
-        public Publication()
+        public void ToCreatePublicationModel(CreatePublicationModel model)
         {
-
-        }
-
-        public Publication(CreatePublicationModel model)
-        { 
             Id = model.Id;
             PropertyTypeId = model.PropertyTypeId;
             if (model.BalconyTypeId == 0)

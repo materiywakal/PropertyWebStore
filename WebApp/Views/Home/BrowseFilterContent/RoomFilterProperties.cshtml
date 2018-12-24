@@ -1,24 +1,24 @@
 ﻿@model WebApp.ViewModels.BrowseFilterModel
 
-<div>
+<div style="margin-top:5px;">
     @Html.Label("Этаж")
     @Html.EditorFor(m => m.Floor)
 </div>
-<div>
+<div style="margin-top:5px;">
     @Html.Label("Количество предлагаемых комнат")
     @Html.EditorFor(m => m.OfferingRoomAmount)
 </div>
-<div>
+<div style="margin-top:5px;">
     @Html.Label("Проходная комната")
     @Html.RadioButtonFor(m => m.IsPassageRoom, true)
     @Html.Label("С отдельным входом")
     @Html.RadioButtonFor(m => m.IsPassageRoom, false)
 </div>
-<div>
+<div style="margin-top:5px;">
     @Html.Label("Наличие мебели")
     @Html.CheckBoxFor(m => m.IsFurnitureExist, false)
 </div>
-<div>
+<div style="margin-top:5px;">
     @Html.Label("Сдача посуточно")
     @Html.RadioButtonFor(m => m.IsOneDayRent, true)
     @Html.Label("На длительный срок")

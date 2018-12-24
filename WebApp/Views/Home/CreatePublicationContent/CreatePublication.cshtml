@@ -18,13 +18,16 @@
         <div id="propcontent">
             @Html.Action("ContentForFlat")
         </div>
-        @Html.TextBoxFor(m => m.Files, new { type = "file", multiple = "multiple", name = "Files", accept = "image/x-png,image/gif,image/jpeg" })
-        <div>Описание @Html.EditorFor(m => m.Description)</div>
-        <div>Цена @Html.EditorFor(m => m.Cost)</div>
-        <div>Адрес @Html.TextBoxFor(m => m.Address, new { @style = "width: 300px" })</div>
-
-        <div id="yandexMap" style="width:600px; height:600px;"></div>
-        <input type="submit" value="Готово." />
+        <div style="margin-top:5px;">
+            @Html.TextBoxFor(m => m.Files, new { type = "file", multiple = "multiple", name = "Files", accept = "image/x-png,image/gif,image/jpeg" })
+        </div>
+        <div style="margin-top:5px;">Описание @Html.EditorFor(m => m.Description)</div>
+        <div>@Html.ValidationMessageFor(m => m.Description)</div>
+        <div style="margin-top:5px;">Цена @Html.EditorFor(m => m.Cost) $</div>
+        <div>@Html.ValidationMessageFor(m => m.Cost)</div>
+        <div style="margin-top:5px;">Адрес @Html.EditorFor(m => m.Address, new { htmlAttributes = new { style = "width: 450px;", @readonly = "readonly" } })</div>
+        <div id="yandexMap" style="width:600px; height:600px; margin-top:5px;"></div>
+        <input type="submit" value="Готово." style="margin-top:5px;" />
         <div>
             @Html.ValidationSummary(true)
         </div>

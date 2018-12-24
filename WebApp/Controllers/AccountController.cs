@@ -16,7 +16,7 @@ namespace WebApp.Controllers
 {
     public class AccountController : Controller
     {
-        Models.WebContext db = new Models.WebContext();
+        WebAppContext db = new WebAppContext();
         public ActionResult Login()
         {
             return View();

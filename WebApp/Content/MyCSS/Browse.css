@@ -7,7 +7,7 @@
     margin: auto;
 }
 .publaddress {
-    margin: auto;
+    margin: auto auto auto 5px;
 }
 .publdata {
     font-size: 7pt;
